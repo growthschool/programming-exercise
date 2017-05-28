@@ -14,6 +14,7 @@ def find_max(x, y, z)
       max = z
     end
   end
+  return max
 end
 
 print "请输入一个数字x，然后按 Enter: "
