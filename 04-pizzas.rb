@@ -8,5 +8,8 @@ people = gets
 
 # .....
 
-puts "每人可分得几片: _________ 片"
-puts "还剩下几片: _________ 片"
+pices = (pizzas.to_i)/(people.to_i)
+remain = (pizzas.to_i)%(people.to_i)
+
+puts "每人可分得几片: #{pices}片"
+puts "还剩下几片: #{remain}片"
