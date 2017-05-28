@@ -8,7 +8,7 @@ print "请输入有多少人要吃，然后按 Enter: "
 people = gets
 people = people.to_i
 
-get = (pizzas / people).round
+get = pizzas / people
 left = pizzas % people
 
 puts "每人可分得几片: #{get} 片"
