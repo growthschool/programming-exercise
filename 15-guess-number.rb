@@ -5,13 +5,16 @@ target = rand(100)
 while (true)
   print "请猜一个 0~99 的数字 N，然后按 Enter: "
   n = gets
-
   #puts "太低了，再猜一次"
   #puts "太高了，再猜一次"
 
   if n.to_i == target
     puts "恭喜猜中啦! "
     break
+  elsif n.to_i > target
+    puts "太高了，再猜一次"
+  else
+    puts "太低了，再猜一次"
   end
 
 end

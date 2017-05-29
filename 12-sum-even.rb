@@ -4,7 +4,10 @@ i = 1
 total = 0
 
 while ( i <= 100 )
-
+  n = 0
+  if i % 2 == 0
+    total +=i
+  end
   # ....
 
   i+=1
