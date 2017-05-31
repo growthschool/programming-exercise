@@ -6,7 +6,7 @@ b = 2
 puts "a 是 #{a}"
 puts "b 是 #{b}"
 
-c = 0
+
 c = b
 b = a
 a = c
