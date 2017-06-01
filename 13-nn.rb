@@ -2,10 +2,15 @@
 
 print "请输入数字 N，然后按 Enter: "
 n = gets
+m = n.to_i
 
-# while ( ... )
-#   while ( ...)
-#
-#   end
-# end
+i = 0
 
+while (i<=m)
+  j = 0
+  while (j<=m)
+    print i,"x",j, "=",i*j,"\n"
+     j += 1
+  end
+  i += 1
+end

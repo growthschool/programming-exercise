@@ -17,17 +17,32 @@ while (true)
 
   if command == "add"
     print "请输入代办事项: "
-    # ...
+     add = gets
+     todos << add
+
+
+
   elsif command == "remove"
     print "请输入要删除的编号: "
-    # ...
+    remove = gets
+    todos.delete_at(remove.to_i)
+
+
   elsif command == "save"
     puts "存盘离开"
 
-    # ...
+    target = File.open("todos.txt", "w+")
+      for i in todos
+        target.write(i)
+        target.write("\n")
+       end
+     target.close()
+
     break;
   else
     puts "看不懂，请再输入一次"
   end
-end
 
+
+
+end
