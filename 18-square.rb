@@ -2,9 +2,9 @@
 
 arr = []
 
-print "请输入数字 N，然后按 Enter: "
+print '请输入数字 N，然后按 Enter: '
 n = gets
 
 # ...
-
+arr = Array.new(n.to_i) { |e| e *= e }
 puts arr.to_s
