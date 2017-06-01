@@ -2,8 +2,21 @@
 
 def find_even_keys(hash)
 
-  # ... (请回传一个数组)
+  value = hash.values
+  a = []
+  for i in value
+    if i % 2 == 0
+      a << i
+    end
+  end
+  # puts a.to_s
 
+  b = []
+  for j in a
+    c = hash.key(j)
+    b << c
+  end
+  return b
 end
 
 h = {
@@ -17,5 +30,3 @@ h = {
 answer = find_even_keys(h)
 
 puts "有偶数 value 的 keys 有 #{answer}" # 应该是数组 [b,d,e]
-
-
