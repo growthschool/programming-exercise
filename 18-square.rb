@@ -2,9 +2,12 @@
 
 arr = []
 
-print "请输入数字 N，然后按 Enter: "
+print '请输入数字 N，然后按 Enter: '
 n = gets
 
-# ...
+for x in 0..n.to_i
 
+    arr.push(x * x)
+
+end
 puts arr.to_s
