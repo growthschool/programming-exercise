@@ -12,4 +12,5 @@ while i <= n.to_i
         j += 1
      end
     i += 1
+    j = 0
 end
