@@ -1,19 +1,23 @@
 # 题目: 使用者输入 x,y,z，请输出三个数中最大的数
 
 def find_max(x, y, z)
+  xx = x.to_i
+  yy = y.to_i
+  zz = z.to_i
+  xx > yy ? 'x' : yy > zz ? 'y' : 'z'
 end
 
-print "请输入一个数字x，然后按 Enter: "
+print '请输入一个数字x，然后按 Enter: '
 x = gets
 
-print "请输入一个数字y，然后按 Enter: "
+print '请输入一个数字y，然后按 Enter: '
 y = gets
 
-print "请输入一个数字z，然后按 Enter: "
+print '请输入一个数字z，然后按 Enter: '
 z = gets
 
 # ....
 
-answer = find_max(x,y,z)
+answer = find_max(x, y, z)
 
 puts "最大的数是 #{answer}"
