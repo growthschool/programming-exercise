@@ -1,18 +1,9 @@
 # 给定一 Hash，输出 value 是偶数的 keys
 
 def find_even_keys(hash)
-  result = []
-  keys = hash.keys
-  values = hash.values
-  num = 0
-
-
-   values.each do |i|
-        puts "i: #{i}"
-        num += 1
-   end
-
-end ... (请回传一个数组)
+  hash.delete_if {|key, value| value % 2 != 0 }   #=> {"a"=>100}
+  return hash
+end
 
 
 
