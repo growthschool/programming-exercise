@@ -2,8 +2,8 @@
 
 arr = []
 
-while (true)
-  print "请输入数字，结束请直接按 Enter: "
+loop do
+  print '请输入数字，结束请直接按 Enter: '
   user_input = gets
   if user_input == "\n"
     break
@@ -14,7 +14,13 @@ end
 
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+sum = 0
+arr.each { |a| sum += a }
+avar = arr.inject { |sum, el| sum + el }.to_f / arr.size
+max = arr.max
+min = arr.min
+
+puts "总和是 __#{sum}___"
+puts "平均是 __#{avar}___"
+puts "最大值是 __#{max}___"
+puts "最小值是 __#{min}___"
