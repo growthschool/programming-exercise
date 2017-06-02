@@ -1,22 +1,8 @@
 # 给定一 Hash，输出有最大 value 的 key
 
 def find_max(hash)
-  values = hash.values
-  is_max = true
-
-    values.each do |i|
-        is_max = true
-        values.each do |j|
-          if i < j
-            puts "not this one"
-            is_max = false
-            break
-          end
-        end
-      if is_max
-        return hash.key(i)
-      end
-    end
+  values = hash.values.sort.last
+  return hash.key(values)
 end
 
 h = {
