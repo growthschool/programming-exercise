@@ -8,7 +8,8 @@ y = gets
 
 print "请输入一个数字z，然后按 Enter: "
 z = gets
-
 # ....
 
-puts "最大的数是 ________(x或y或z)"
+result = [x, y, z].map(&:to_i).max
+
+puts "最大的数是 ___#{result}_____(x或y或z)"
