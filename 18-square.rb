@@ -7,4 +7,12 @@ n = gets
 
 # ...
 
+i = 0
+N = n.to_i
+
+while (i < N)
+  arr[i]  = i * i
+  i += 1
+end
+
 puts arr.to_s
