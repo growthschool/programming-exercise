@@ -14,7 +14,7 @@ i = 1
 while ( i <= n )
   h = 1
   while ( h <= n )
-    puts "#{i} * #{h}"
+    puts "#{i} * #{h} = #{i * h}" 
     h += 1
   end
   i += 1
