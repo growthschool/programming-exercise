@@ -1,6 +1,7 @@
 # 使用者不断输入数字存进 Array，最后输出总和、平均、最大值、最小值
 
 arr = []
+total = 0
 
 while (true)
   print "请输入数字，结束请直接按 Enter: "
@@ -12,9 +13,16 @@ while (true)
   end
 end
 
-puts arr.to_s
+for i in arr
+  total += i
+end
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+puts arr.to_s
+average = total.to_f / arr.length
+max = arr.max
+min = arr.min
+
+puts "总和是 __#{total}___"
+puts "平均是 __#{average}___"
+puts "最大值是 ___#{max}__"
+puts "最小值是 ___#{min}__"
