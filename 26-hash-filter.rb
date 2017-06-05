@@ -1,25 +1,11 @@
 # 给定一个数组包含 Hash，请过滤和排序
 
 def filter_adults(arr)
-  arr.each do |hash|
-    if hash["age"] < 18
-      puts hash.to_s
-      index = arr.find_index(hash)
-      puts index.to_s
-      arr.delete_at(index)
-    end
-  end
-  return arr
+  return arr.select{|hsh| hsh["age"] > 18 }
 end
 
 def sort(arr)
-  result = []
-  age = []
-
-  arr.each do |hash|
-
-  end
-
+  arr_of_hashes = arr.sort_by { |hsh| hsh["age"] }
 end
 
 
@@ -35,7 +21,8 @@ arr = [
 answer = filter_adults(arr)
 answer = sort(answer)
 
-puts "所有成年人，并由小到大: #{answer} "
+puts "所有成年人，并由小到大: "
+answer.each {|hsh| puts hsh.inspect}
 
 # 答案应该是
 #[
