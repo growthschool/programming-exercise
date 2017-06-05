@@ -1,7 +1,10 @@
 # 给定一阵列内含数字，请输出 0~9 中不见的数字
 
 def find_missing(arr)
-  # ...
+  arr.uniq!
+  outArr = Array.new(10) {|i| i }
+  arr.each{|i| outArr.delete(i)}
+  return outArr
 end
 
 answer = find_missing( [2,2,1,5,8,4] )
