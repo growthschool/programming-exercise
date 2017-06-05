@@ -18,5 +18,35 @@ print "请输入一个整数z，然后按 Enter: "
 z = gets
 
 # ....
+x = x.to_i
+y = y.to_i
+z = z.to_i
 
-puts "结果是________(A或B或C或D或E)"
+if x < 0
+  result = "A"
+elsif x > 0
+  if y > 0
+   if z > 0
+    result = "B"
+   elsif z < 0
+    result = "C"
+   else
+    result = "out of range, as z == 0"
+   end
+ elsif y < 0
+  if z > 0
+    result = "D"
+  elsif z < 0
+    result = "E"
+  else
+    result = "out of range, as z == 0"
+  end
+ else
+  result = "out of range, as y == 0"
+ end
+else
+  result = "out of range, as x == 0"
+end
+
+
+puts "结果是 " + result

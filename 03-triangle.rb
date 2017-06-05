@@ -7,5 +7,5 @@ print "请输入直角三角形的底边，然后按 Enter: "
 b = gets
 
 # .....
-
-puts "直角三角形的面积是: _________"
+area = b.to_f*a.to_f/2
+puts "直角三角形的面积是: " + area.to_s

@@ -11,4 +11,20 @@ z = gets
 
 # ....
 
-puts "最大的数是 ________(x或y或z)"
+x = x.to_f
+y = y.to_f
+z = z.to_f
+
+if x > y
+  if x > z
+    result = "x"
+  else
+    result = "z"
+  end
+elsif y > z
+    result = "y"
+else
+  result = "z"
+end
+
+puts "最大的数是 " + result
