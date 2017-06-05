@@ -10,7 +10,8 @@ arr = [
 
 # ....
 
-puts "所有成年人，并由小到大: _________"
+arr.keep_if{|key| key["age"] >=18}.sort_by!{|key| key["age"]}
+puts "所有成年人，并由小到大: #{arr.to_s}"
 
 # 答案应该是
 #[
