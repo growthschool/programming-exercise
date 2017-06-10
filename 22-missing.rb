@@ -3,12 +3,15 @@
 def find_missing(arr)
   return arr if arr.size == 0
   arr2 = [0,1,2,3,4,5,6,7,8,9]
+(0...arr.size).each do |y|
+    (0...arr2.size).each do |i|
+          if arr[y] == arr2[i]
+            arr2.delete_at(i)
+          end
+    end
+ end
 
-  (0...arr.size).each do |i|
-
- 
-  end
-
+  return arr2
 
 end
 
