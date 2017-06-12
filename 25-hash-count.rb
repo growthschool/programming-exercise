@@ -4,16 +4,21 @@ def count(arr)
   hs = {}
 
   arr.each do |i|
+     if hs[i]
+       hs[i] = hs[i] + 1
+     else
+       hs[i] = 1
+     end
 
   end
 
-  arr.each { |e|
-    if hs.has_key?(e)
-        hs[e] += 1
-    else
-        hs[e] = 1
-    end
-  }
+  # arr.each { |e|
+  #   if hs.has_key?(e)
+  #       hs[e] += 1
+  #   else
+  #       hs[e] = 1
+  #   end
+  # }
   return hs
 
   # return h # 回传一个 hash
