@@ -18,5 +18,31 @@ print "请输入一个整数z，然后按 Enter: "
 z = gets
 
 # ....
-
-puts "结果是________(A或B或C或D或E)"
+def abcde(x,y,z)
+  if x < 0
+    "A"
+  elsif x == 0  # 当 x 为 0，输出 “0”
+    "0"
+  else
+    if y > 0
+      if z > 0
+        "B"
+      elsif z < 0
+        "C"
+      else
+        "0"   # 当 y 为 0，输出 “0”
+      end
+    elsif y < 0
+      if z > 0
+        "D"
+      elsif z < 0
+        "E"
+      else
+        "0"
+      end
+    else
+      "0"   # 当 z 为 0，输出 “0”
+    end
+  end
+end
+puts "结果是#{abcde(x.to_i,y.to_i,z.to_i)}(A或B或C或D或E)"
