@@ -11,4 +11,4 @@ avg = pizzas.to_i/people.to_i
 left = pizzas.to_i%people.to_i
 
 puts "每人可分得几片: #{avg} 片"
-puts "还剩下几片: #{left} 片"
+puts "还剩下几片: #{ left} 片"
