@@ -16,11 +16,12 @@ bmi = weight.to_f / (height * height)
 
 if bmi < 18.5
   result = "过轻";
+elsif bmi >= 24.0
+  result = "过重"
+else
+  result = "正常"
 end
 
-if bmi >= 24.0
-  result = "过重"
-end
 
 puts "您的 BMI 是: #{bmi}"
 
