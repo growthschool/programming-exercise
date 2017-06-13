@@ -5,6 +5,23 @@ print "请输入一个整数，然后按 Enter: "
 x = gets
 
 # ....
+def positiveOrNegative(num)
+  if num < 0
+    '负数'
+  elsif num > 0
+    '正数'
+  else
+    '零'
+  end
+end
 
-puts "这个数是_____ (正数或零或负数)"
-puts "这个数是_____ (偶数或奇数)"
+def oddEven(num)
+  if num % 2 == 0
+    '偶数'
+  else
+    '奇数'
+  end
+end
+
+puts "这个数是#{positiveOrNegative(x.to_i)}"
+puts "这个数是#{oddEven(x.to_i)}"
