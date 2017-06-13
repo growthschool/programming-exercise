@@ -10,5 +10,14 @@ print "请输入一个数字z，然后按 Enter: "
 z = gets
 
 # ....
+def max(x,y,z)
+  if x > y && x > z
+    x
+  elsif y > z
+    y
+  else
+    z
+  end
+end
 
-puts "最大的数是 ________(x或y或z)"
+puts "最大的数是 #{max(x.to_i, y.to_i, z.to_i)} (x或y或z)"
