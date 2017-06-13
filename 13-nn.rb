@@ -2,10 +2,14 @@
 
 print "请输入数字 N，然后按 Enter: "
 n = gets
-
-# while ( ... )
-#   while ( ...)
-#
-#   end
-# end
-
+n = n.to_i
+i = 1
+while ( i <= n )
+  j = 1
+  while ( j <= i )
+    print "#{i*j}   "
+    j += 1
+  end
+  i += 1
+  puts
+end
