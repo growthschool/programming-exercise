@@ -29,8 +29,7 @@ if x > 0
   if y > 0
     if z > 0
       result = "B"
-    end
-    if z < 0
+    else z < 0
       result = "C"
     end
   end
@@ -38,8 +37,7 @@ if x > 0
   if y < 0
     if z > 0
       result = "D"
-    end
-    if z < 0
+    else z < 0
       result = "E"
     end
   end
