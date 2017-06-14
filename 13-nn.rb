@@ -5,13 +5,12 @@ n = gets
 n = n.to_i
 
 i = 1
-y = 0
 
 while ( i <= n )
+  y = 0
    while (y <= n)
      puts "#{i}*#{y}=#{i * y} "
      y = y + 1
    end
-   y = i
    i = i + 1
 end
