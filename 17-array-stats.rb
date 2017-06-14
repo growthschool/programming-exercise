@@ -12,9 +12,12 @@ while (true)
   end
 end
 
+sum = 0
+arr.each { |a| sum += a }
+
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+puts "总和是 #{sum.to_s}"
+puts "平均是 #{sum.to_f/arr.length}"
+puts "最大值是 #{arr.max}"
+puts "最小值是 #{arr.min}"
