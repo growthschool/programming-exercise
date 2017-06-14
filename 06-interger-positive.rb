@@ -8,13 +8,9 @@ x = x.to_i
 
 if x < 0
   result = "负数"
-end
-
-if x == 0
+elsif x == 0
   result = "零"
-end
-
-if x > 0
+else
   result = "正数"
 end
 
