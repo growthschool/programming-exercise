@@ -12,6 +12,10 @@ while (true)
   end
 end
 
+
+
+
+
 puts arr.to_s
 
 puts "总和是 #{arr.inject(0){|sum,x| sum + x }}"

@@ -6,7 +6,7 @@ while (true)
   print "请猜一个 0~99 的数字 N，然后按 Enter: "
   n = gets
   n = n.to_i
-  
+
   if n < target
     puts "太低了，再猜一次"
   end

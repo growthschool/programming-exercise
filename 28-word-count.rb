@@ -32,12 +32,3 @@ File.open("wordcount.txt") do |f|
   #       hs[e] = 1
   #   end
   # }
-
-
-
-
-
-
-
-
-puts m
