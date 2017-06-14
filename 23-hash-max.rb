@@ -2,6 +2,15 @@
 
 def find_max(hash)
   # ...
+  max_value = hash.values.max
+  max_key = ""
+  hash.each do |key,value|
+    if value == max_value
+      max_key = key
+      break
+    end
+  end
+  max_key
 end
 
 h = {
@@ -15,5 +24,3 @@ h = {
 answer = find_max(h)
 
 puts "有最大 value 的是 #{answer}" # 应该是 d
-
-
