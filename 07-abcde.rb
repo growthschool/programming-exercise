@@ -22,27 +22,20 @@ y = y.to_i
 z = z.to_i
 if x < 0
   result = "A"
-end
-
-if x > 0
+elsif x > 0
   if y > 0
     if z > 0
       result = "B"
-    end
-    if z < 0
+    elsif z < 0
       result = "C"
     end
-  end
-
-  if y < 0
+  elsif y < 0
     if z > 0
       result = "D"
-    end
-    if z < 0
+    elsif z < 0
       result = "E"
     end
   end
-
 end
 
 
