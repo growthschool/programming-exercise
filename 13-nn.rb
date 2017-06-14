@@ -2,10 +2,16 @@
 
 print "请输入数字 N，然后按 Enter: "
 n = gets
+n = n.to_i
+a = 0
+b = 0
 
-# while ( ... )
-#   while ( ...)
-#
-#   end
-# end
-
+while ( a <= n )
+  while ( b <= n )
+    c = a * b
+    puts "#{a} * #{b} = #{c}"
+    b += 1
+  end
+  a += 1
+  b = 0  
+end

@@ -11,7 +11,18 @@ print "请输入您的身高(厘米)，然后按 Enter: "
 height = gets
 
 # .....
+x = height.to_f / 100
+y = (weight.to_f / (x * x))
 
-puts "您的 BMI 是: _________"
+if y < 18.5
+  z = "过轻"
+elsif y >= 24
+  z = "过重"
+else  18.5 < y < 24
+  z = "正常"
+end
 
-puts "您的 BMI 结果是: _________(过轻或正常或过重)"
+
+puts "您的 BMI 是: #{y}"
+
+puts "您的 BMI 结果是: #{z}"
