@@ -12,9 +12,16 @@ while (true)
   end
 end
 
+sum = 0
+arr.each do |a|
+  sum = sum + a
+end
+
+puts sum
+puts sum/arr.size
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+puts "总和是 #{arr.inject(0){|sum,x| sum + x }}"
+puts "平均是 #{arr.inject{ |sum, el| sum + el } / arr.size}"
+puts "最大值是 #{arr.max}"
+puts "最小值是 #{arr.min}"
