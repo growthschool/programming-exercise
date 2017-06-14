@@ -12,10 +12,13 @@ while (true)
   end
 end
 
+sum = 0
+arr.each do |a|
+  sum = sum + a
+end
 
-
-
-
+puts sum
+puts sum/arr.size
 puts arr.to_s
 
 puts "总和是 #{arr.inject(0){|sum,x| sum + x }}"
