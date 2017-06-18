@@ -9,10 +9,10 @@ def is_prime(n)
           con = n % denominator   # 每次循环的开始都用 n 对 分母求一次余数
           if con != 0             # 当余数结果 不等于0 时，说明暂时没有被整除
             denominator += 1      # 那把分母值 + 1 准备下一次循环验证, 循环到 分母大于 n/2 时一直都没有出现整除情况，就会完成while 回圈，返回true （18行）
-          elsif con == 0          # 循环到某一次突然整除了，那直接返回 false 并中断整个 method
+          elsif con == 0          # 循环到某一次突然整除了，那直接返回 false
             puts "验证因数截止于数字 #{denominator}"
             return false
-            break
+            break                 # break 中断的是 while 回圈 还是整个 method ?
           end
     end
     puts "验证因数截止于数字 #{denominator}"
