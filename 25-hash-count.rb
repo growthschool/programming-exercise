@@ -2,9 +2,10 @@
 
 def count(arr)
   h = {}
-
-  arr.each do |i|
-    # ...
+  uniq_arr = arr.uniq
+  uniq_arr.each do |i|
+    value = arr.count(i)
+    h[i] = value
   end
 
   return h # 回传一个 hash
@@ -15,4 +16,3 @@ arr =  ["a", "d", "d", "c", "b", "c", "c", "c", "d", "d", "e", "e", "e", "d", "a
 answer = count(arr)
 
 puts answer # 答案应该是 {"a"=>3, "d"=>6, "c"=>5, "b"=>1, "e"=>5}
-
