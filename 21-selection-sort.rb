@@ -1,7 +1,7 @@
 # 给定一数组内含数字，请实作选择排序法进行排序。
 # https://zh.wikipedia.org/wiki/选择排序
 def insertion_sort(arr)
-  len = arr.length-1
+  len = arr.size-1
   for i in 0.. len
     min = i # 假定首元素为最小元素
     for j in i+1.. len
