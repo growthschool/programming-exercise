@@ -1,0 +1,164 @@
+
+<div class="show-page detail mt20 w1200 bc pb50">
+  <div class="intro clearfix">
+
+    <div class="cover fl">
+      <!-- 商品小图 --->
+        <div class="intro-bigPic border pr">
+          <div class="magnifier-preview border" id="preview"></div>
+          <% if @photos.present? %>
+              <!-- <a class="magnifier-thumb-wrapper" href="javascript:;"> -->
+            <img
+              id="thumb"
+              src="<%= @photos.first.avatar.medium.url %>"
+              data-large-img-wrapper="preview"
+              data-large-img-url="<%= @photos.first.avatar.medium.url %>">
+          <% end %>
+        </div>
+        <!-- 商品大图 -->
+      <ul class="intro-preview clearfix">
+        <% if @photos.present? %>
+         <% @photos.each_with_index do |p, index| %>
+           <% if index == 0 %>
+             <li class="border intro-preview-item intro-preview-activeItem fl">
+           <% else %>
+              <li class="border intro-preview-item fl">
+           <% end %>
+           <% if index < 5 %>
+             <%= image_tag p.avatar.medium.url %>
+           <% end %>
+             </li>
+        <% end %>
+       <% end %>
+      </ul>
+
+       <!--     收藏功能         -->
+       <p class="mt20">
+         <% if user_signed_in? %>
+           <% if !current_user.is_favorite_of?(@product) %>
+              <%= link_to favorite_product_path(@product), :class => " btn btn-default", method: :post do %>
+               <i class="fa  fa-star-o fa-lg"></i>
+              <% end %>
+           <% else %>
+              <%= link_to unfavorite_product_path(@product), :class => " btn btn-default", method: :post do %>
+               <i class="fa fa-star col-red fa-lg"></i>
+             <% end %>
+           <% end %>
+        <% else %>
+         <%= link_to favorite_product_path(@product), :class => "like btn btn-default",method: :post do %>
+           <i class="fa fa-heart-o fa-lg"></i>
+         <% end %>
+        <% end %>
+      </p>
+       <!-- end -->
+
+    </div>
+
+
+
+
+    <div class="intro-text fr col-md-6">
+      <div class="row">
+       <h3 class="f20 ell fb"> <%= @product.title %> </h3>
+
+         <div class="intro-text-value bg-gray">
+            <% if @product.discount.present? && @product.quantity > 0 %>
+                <div class="intro-text-value bg-gray">
+                 <span class="pl20 pr30">售价</span><s><span class="price1 f20 fb col-gray">￥<%= @product.price %></span></s> &nbsp &nbsp &nbsp <span class="price f24 fb col-red">￥<%= @product.price = @product.price * @product.discount/100 %></span>
+                </div>
+            <% else %>
+            <% end %>
+          </div>
+
+          <div class="intro-text-service">
+            <span class="pl20 pr30">运费</span><span>满199元包邮</span>
+          </div>
+
+          <div class="intro-text-count">
+            <span class="pl20 pr30">库存</span><span><%= @product.quantity %></span>
+          </div>
+
+          <div class="intro-text-view">
+            <span class="pl20 pr30">浏览</span><span><%= @product.impressionist_count(:filter=>:session_hash)%></span>
+          </div>
+          </br>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <% if @product.quantity.present? && @product.quantity > 0 %>
+                <%= link_to("加入购物车", add_to_cart_product_path(@product),:method => :post, :class => "intro-text-btn add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red") %>
+              <% else %>
+                已销售一空，无法购买
+              <% end %>
+           </div>
+
+          <div class="col-sm-2">
+            <% if @product.quantity.present? && @product.quantity > 0 %>
+              <%= link_to("立即购买", instant_buy_product_path(@product), :method => :post, :class => "intro-text-btn1 add-cart pl15 pr15 mt20 ml20 tc col-red f20 bg-red1") %>
+            <% else %>
+              已销售一空，无法购买
+            <% end %>
+          </div>
+       </div>
+     </div>
+     </br>
+
+     <div class="col-md-6">
+        分享至<%= social_share_button_tag(@product.title, :allow_sites => %w(twitter facebook wechat linkedin qq weibo)) %>
+     </div>
+
+  </div>
+
+ </div>
+
+   <div class="container">
+     <div  class="row">
+       <div class="product-wrap">
+         <div class="ald-skuRight">
+           <!-- 热门推荐 --->
+            <div class=''>
+              <%= render "shared/suggest" %>
+            </div>
+         </div>
+
+
+       <div class="product-info">
+         <!--评论区域-->
+         <div class="TabBarBox">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="active ">
+                <a href="#tab-left" role="tab" data-toggle="tab">商品详情</a>
+              </li>
+              <li>
+                <a href="#tab-right" role="tab" data-toggle="tab">累计评价
+                  <%= @product.reviews.count %></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content">
+                  <div class="tab-pane active" id="tab-left">
+                    <div class="description">
+                      <p>
+                        <%= raw @product.description %>
+                      </p>
+                    </div>
+                  </div>
+
+           <div class="tab-pane" id="tab-right">
+             <div class="row review">
+               <div class="col-md-10 col-md-offset-1">
+               <div id="reivews">
+                 <%= render @product.reviews%>
+                 <hr>
+                 <%= render "reviews/form"%>
+               </div>
+              </div>
+             </div>
+           </div><!--评论结束-->
+         </div><!-- tab-content -->
+         </div><!-- product-info -->
+     </div><!-- product-wrap -->
+     </div><!-- row -->
+   </div><!-- container -->
+</div>

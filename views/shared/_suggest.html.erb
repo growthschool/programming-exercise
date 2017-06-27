@@ -1,0 +1,35 @@
+<div class="suggest-title">
+  <a>推荐商品</a>
+</div>
+
+<div class="product-hot">
+  <div class="ald-carousel">
+    <div class="wrapCon">
+        <!-- <ul> -->
+          <!--=== 随机推荐5个商品 ===-->
+          <% @suggests.each_with_index do |product, index| %>
+          <!-- <li> -->
+            <div class="img">
+              <%= link_to product_path(product) do %>
+                <% if product.image.present? %>
+                  <%= image_tag(product.image.thumb.url, class: "thumbnail-1 wow pulse", data: {wow_delay: "2s" }) %>
+
+                <% else %>
+                  <%= image_tag('http://placehold.it/100x100&text=No Pic', class: 'thumbnail-1') %>
+
+                <% end %>
+                <p class="look_price">¥<%= product.price %></p>
+              </div>
+
+              <p class="look_title">
+                <a class="ALDCLS-act" href="<%= product_path(product) %>" target="_blank" data-spm-anchor-id="a220o.1000855.1998025129.2"><%= product.title %>
+                </a>
+              </p>
+
+              <% end %>
+          <!-- </li> -->
+          <% end %>
+        <!-- </ul> -->
+      </div>
+    </div>
+  </div>

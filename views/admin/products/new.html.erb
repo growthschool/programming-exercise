@@ -1,0 +1,50 @@
+<h2> 添加商品</h2>
+
+<%= simple_form_for [:admin,@product] do |f| %>
+
+
+
+  <div class="group">
+    <%= f.input :title, :label => "商品名称" %>
+  </div>
+
+  <div class="group">
+    <%= f.input :description, :label => "商品描述"%>
+  </div>
+
+  <div class="group">
+    <%= f.input :quantity, :label => "库存" %>
+  </div>
+
+  <div class="group">
+    <%= f.input :price, :label => "定价" %>
+  </div>
+
+  <div class="group">
+    <%= f.input :discount,:label => "折扣，填写1~100内的数字" %>
+  </div>
+
+
+  <div class="group">
+    <%= f.input :category_id, as: :select, collection: @categories, label: "类别" %>
+  </div><br/>
+
+
+
+  <div class="group">
+    <%= f.input :image, :label => "封面图片", as: :file%>
+    <%= f.label :avatar, :label => "多图上传" %><br>
+    <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]"%>
+  </div>
+
+  <div class="group">
+    <%= f.input :is_hidden, :label => "下架" %>
+  </div>
+
+  <%= f.submit "提交", data: { disable_with: "提交中..." } %>
+
+<% end %>
+
+<script type="text/javascript">
+  autosize($('#product_description'))
+</script>

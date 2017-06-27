@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>南山先生 后台</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="shortcut icon" href="/images/adminuser.png">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="content">
+    <%= render "common/navbar" %>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-2">
+          <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+            <li>
+              <%= link_to("商品管理", admin_products_path) %>
+            </li>
+            <li>
+              <%= link_to("订单管理", admin_orders_path) %>
+            </li>
+            <li>
+              <%= link_to("分类管理", admin_categories_path) %>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-10">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
