@@ -8,4 +8,10 @@ b = gets
 
 # .....
 
-puts "直角三角形的面积是: _________"
+
+puts "直角三角形的面积是: #{a.to_i*b.to_i/2}"
+puts a.to_i*b.to_i/2
+
+
+puts "直角三角形的面积是:"
+puts a.to_i*b.to_i/2
