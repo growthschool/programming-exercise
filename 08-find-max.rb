@@ -9,6 +9,13 @@ y = gets
 print "请输入一个数字z，然后按 Enter: "
 z = gets
 
-# ....
+m = 0
 
-puts "最大的数是 ________(x或y或z)"
+[x, y, z].each do |i|
+  if i.to_f > m
+    m = i.to_f
+  end
+end
+
+
+puts "最大的数是 ____#{m}____(x或y或z)"
