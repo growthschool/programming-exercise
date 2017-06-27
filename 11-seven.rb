@@ -3,7 +3,7 @@
 i = 1
 while ( i <= 100 )
 
-  # ....
-
-  i+=1
+puts i
+i = i*7
+  # i+=1
 end
