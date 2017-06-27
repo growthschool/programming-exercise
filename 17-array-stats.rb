@@ -14,7 +14,16 @@ end
 
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+sum = 0.0
+for i in arr
+  sum += i
+end
+
+average = sum / arr.size
+min = arr.sort.first
+max = arr.sort[-1]
+
+puts "总和是 #{sum}"
+puts "平均是 #{average}"
+puts "最大值是 #{max}"
+puts "最小值是 #{min}"
