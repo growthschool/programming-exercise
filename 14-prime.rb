@@ -3,9 +3,7 @@
 def is_prime(n)
   
   for i in 2 .. (n / 2)
-     if n % i != 0
-        true
-     else 
+     if n % i == 0
         false
         break      	
      end 
