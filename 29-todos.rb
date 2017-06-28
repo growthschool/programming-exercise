@@ -17,10 +17,29 @@ while (true)
 
   if command == "add"
     print "请输入代办事项: "
-    # ...
+    event = gets
+    nfile = File.new("todos.txt", "a+") 
+      nfile.write(event)
+      
+
   elsif command == "remove"
     print "请输入要删除的编号: "
-    # ...
+    number = gets.chomp
+    
+    file_lines = ''
+    i = 0
+    File.readlines("todos.txt").each do |line|
+      unless i == number.to_i
+        file_lines += line
+        puts line
+      end
+       i += 1
+    end
+
+    File.open('todos.txt', "w") do |f|
+      f.puts file_lines
+    end
+  
   elsif command == "save"
     puts "存盘离开"
 
