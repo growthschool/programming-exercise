@@ -13,9 +13,9 @@ x = x.to_f
 y = y.to_f
 z = z.to_f
 
-if ( x > y ) && ( y >= z)
+if ( x >= y ) && ( x >= z)
   p = x
-elsif ( y > x ) && ( x >= z )
+elsif ( x < y ) && ( y >= z )
   p = y
 else
   p = z
