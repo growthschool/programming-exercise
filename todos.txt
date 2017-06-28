@@ -1,4 +1,11 @@
-Buy book
-Go Shopping
-Walk
-Gogo
+ruby
+rails
+book
+shopping
+walk
+chanweiyan
+chan
+arr
+todo
+hi
+world
