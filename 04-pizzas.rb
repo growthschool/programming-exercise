@@ -6,7 +6,8 @@ pizzas = gets
 print "请输入有多少人要吃，然后按 Enter: "
 people = gets
 
-# .....
+per  = pizzas.to_i / people.to_i
+last = pizzas.to_i % people.to_i
 
-puts "每人可分得几片: _________ 片"
-puts "还剩下几片: _________ 片"
+puts "每人可分得几片: #{per}片"
+puts "还剩下几片: #{last} 片"
