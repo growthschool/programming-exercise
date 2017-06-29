@@ -9,6 +9,6 @@ y = gets
 print "请输入一个数字z，然后按 Enter: "
 z = gets
 
-# ....
+result = [x, y, z].max
 
-puts "最大的数是 ________(x或y或z)"
+puts "最大的数是#{result})"
