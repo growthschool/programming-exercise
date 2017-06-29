@@ -1,8 +1,14 @@
 # 给定一数组内含数字，请实作选择排序法进行排序。
 # https://zh.wikipedia.org/wiki/选择排序
 
-def insertion_sort(arr)
-  #...
+def insertion_sort(array)
+  result = []
+  array.size.times do |i|
+    min = array.min
+    result << min
+    array.delete_at(array.index(min))
+  end
+  return result
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
