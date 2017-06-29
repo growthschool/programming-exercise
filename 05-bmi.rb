@@ -10,8 +10,19 @@ weight = gets
 print "请输入您的身高(厘米)，然后按 Enter: "
 height = gets
 
-# .....
+bmi = weight.to_f / height.to_f / height.to_f
 
-puts "您的 BMI 是: _________"
+if bmi < 18.5
+  result = "过轻"
+elsif bmi >= 24.0
+  result = "过重"
+else
+  result = "正常"
+end
+puts "您的 BMI 是: #{bmi}"
 
-puts "您的 BMI 结果是: _________(过轻或正常或过重)"
+
+puts "您的 BMI 结果是: #{result}"
+
+# 犯过连个错误： 浮点数要用to_f,而我用了to_i
+# elsif 写成了elseif，所以程序一直没有执行中间那段
