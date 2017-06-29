@@ -13,7 +13,7 @@ while (true)
 end
 
 sum = arr.inject(&:+)
-average = sum / arr.size
+average = sum.to_f / arr.size
 puts arr.to_s
 
 
