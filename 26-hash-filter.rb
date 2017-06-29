@@ -8,9 +8,38 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
+h = []
+
+arr.each do |i|
+  if i["age"] > 18
+    h << i
+  end
+end
+
+
+puts h
+
+r = []
+
+h.each do |i|
+  x = 0
+  y = 0
+  h.each do |e|
+    x = i["age"] - e["age"]
+    if x > 0
+      y += 1
+    end
+  end
+  r[y] = i
+end
+
+
+
+
+
 # ....
 
-puts "所有成年人，并由小到大: _________"
+puts "所有成年人，并由小到大: #{r}"
 
 # 答案应该是
 #[
