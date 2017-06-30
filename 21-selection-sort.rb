@@ -2,7 +2,19 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def insertion_sort(arr)
-  #...
+  n = arr.size - 1
+
+  n.times do |i|
+    index_min = i
+
+    (i + 1).upto(n) do |j|
+      index_min = j if arr[j] < arr[index_min]
+    end
+
+    # Yep, in ruby I can do that, no aux variable. w00t!
+    arr[i], arr[index_min] = arr[index_min], arr[i] if index_min != i
+  end
+  arr
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]

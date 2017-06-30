@@ -8,9 +8,9 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
+answer = arr.select{|h| h["age"] > 18}.sort_by{ |e| e["age"]}
 
-puts "所有成年人，并由小到大: _________"
+puts "所有成年人，并由小到大: #{answer}"
 
 # 答案应该是
 #[

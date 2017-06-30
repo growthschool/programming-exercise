@@ -12,6 +12,10 @@ while (true)
   if n.to_i == target
     puts "恭喜猜中啦! "
     break
+  elsif n.to_i < target
+    puts "太低了，再猜一次"
+  else
+    puts "太高了，再猜一次"
   end
 
 end

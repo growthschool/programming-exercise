@@ -11,4 +11,7 @@ z = gets
 
 # ....
 
-puts "最大的数是 ________(x或y或z)"
+arr = [x, y, z].map(&:to_i)
+
+
+puts "最大的数是#{arr.max}"
