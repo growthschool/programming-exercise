@@ -10,13 +10,43 @@
 
 print "请输入一个整数x，然后按 Enter: "
 x = gets
+x = x.to_i
 
 print "请输入一个整数y，然后按 Enter: "
 y = gets
+y = y.to_i
 
 print "请输入一个整数z，然后按 Enter: "
 z = gets
+z = z.to_i
 
 # ....
+if x < 0
+  result = "A"
 
-puts "结果是________(A或B或C或D或E)"
+
+else
+
+  if y > 0
+
+    if z > 0
+      result = "B"
+    else z < 0
+      result = "C"
+    end
+
+  else
+
+    if z > 0
+      result = "D"
+    else z < 0
+      result = "E"
+    end
+
+  end
+
+
+end
+
+
+puts "结果是#{result}"
