@@ -5,6 +5,11 @@ arr = []
 print "请输入数字 N，然后按 Enter: "
 n = gets
 
-# ...
+while n.to_i >= 0
+    arr.unshift(n.to_i ** 2)
+    n = n.to_i - 1
+end
 
 puts arr.to_s
+
+#平方的公式写错， 应该是 n**2 而不是n**n
