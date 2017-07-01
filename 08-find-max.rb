@@ -10,17 +10,17 @@ print "请输入一个数字z，然后按 Enter: "
 z = gets.to_f
 
 # 第一种方法
-# if x > y && x > z
-#   p = x
-# elsif ( x > y && y > z )
-#   p = y
-# elsif z > x && z > y
-#   p = z
-# else
-#   p = y
-# end
-# puts "最大的数是 #{p}"
+if x > y && x > z
+  p = x
+elsif ( x > y && y > z )
+  p = y
+elsif z > x && z > y
+  p = z
+else
+  p = y
+end
+puts "最大的数是 #{p}"
 
 # 第二种方法
-arr = [x, y, z].map()
-puts "最大的数是 #{arr.max}"
+# arr = [x, y, z].map()
+# puts "最大的数是 #{arr.max}"
