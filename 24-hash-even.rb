@@ -1,11 +1,8 @@
 # 给定一 Hash，输出 value 是偶数的 keys
 
 def find_even_keys(hash)
-
    hash.select {|k,v| v.even?}.keys
-
 end
-
 
 h = {
   "a" => 71,
