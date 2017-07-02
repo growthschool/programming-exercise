@@ -1,7 +1,7 @@
 # 给定一 Hash，输出有最大 value 的 key
 
 def find_max(hash)
-  hash.max_by { |k, v| v }
+   hash.max_by{ |k, v| v }[0]
 end
 
 h = {
