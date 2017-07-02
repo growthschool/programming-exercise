@@ -7,10 +7,11 @@ arr = [
   { "name" => "Steven", "age" => 22 },
   { "name" => "Vincent", "age" => 6 },
 ]
+answer = arr.select! {|c| c["age"] >=18}.sort_by {|a| a["age"]}
 
-# ....
+# select是数列找出对应条件的命令，sort_by 由小到大排序，c和a可任意取值，找key为age的hash
 
-puts "所有成年人，并由小到大: _________"
+puts "所有成年人，并由小到大: #{answer}"
 
 # 答案应该是
 #[
