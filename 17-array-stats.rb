@@ -9,12 +9,22 @@ while (true)
     break
   else
     arr << user_input.to_i
+    #array.push(999) 或 array << 999 会新增一个元素 999 到数组的最后面
   end
 end
+# 第一种总和的方法
+sum = 0
+arr.each do |i|
+  sum += i
+end
+
+# 第二种总和的方法
+# sum = arr.inject(&:+)
+average = sum / arr.size
 
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+puts "总和是 #{sum}"
+puts "平均是 #{average}"
+puts "最大值是 #{arr.max}"
+puts "最小值是 #{arr.min}"

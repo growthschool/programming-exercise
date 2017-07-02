@@ -13,7 +13,11 @@ print "请输入一个数字z，然后按 Enter: "
 z = gets
 
 # ....
-
+def find_max(x,y,z)
+  arr = [x, y, z].map()
+  arr.max
+  # 或 [x, y, z].map().max
+end
 answer = find_max(x,y,z)
 
 puts "最大的数是 #{answer}"

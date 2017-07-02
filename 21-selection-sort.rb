@@ -1,8 +1,26 @@
 # 给定一数组内含数字，请实作选择排序法进行排序。
 # https://zh.wikipedia.org/wiki/选择排序
 
-def insertion_sort(arr)
-  #...
+# 第一种变相方法：新建一个数组，在原来的数组中找到最小的，插入，然后在删除掉原数组中最小的那个。
+# def insertion_sort(array)
+#   foo = []
+#   array.size.times do |i|
+#     temp = array.min
+#     foo << temp
+#     array.delete_at(array.index(temp))
+#   end
+#   return foo
+# end
+
+# 第二种为真正的选择排序法，找到最小的，然后与第1个交换，再从第2个开始找
+def insertion_sort(array)
+  array if array.size == 0
+    (0...array.size).each do |i|
+      min, index = array[i], i
+      (i...array.size).each { |j| min, index = array[j], j if array[j] < min }
+      array[i], array[index] = array[index] , array[i]
+    end
+  array
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]

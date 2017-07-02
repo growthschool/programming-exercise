@@ -6,7 +6,10 @@ pizzas = gets
 print "请输入有多少人要吃，然后按 Enter: "
 people = gets
 
-# .....
+per_people_pizzas = pizzas.to_f / people.to_f
+pizzas_remainder = pizzas.to_i % people.to_i
+# % 求模 - 把左操作数除以右操作数，返回余数
 
-puts "每人可分得几片: _________ 片"
-puts "还剩下几片: _________ 片"
+puts "每人可分得几片: #{per_people_pizzas.to_i} 片"
+# puts "还剩下几片: #{pizzas.to_f - per_people_pizzas.to_i * people.to_i } 片"
+puts "还剩下几片: #{pizzas_remainder } 片"
