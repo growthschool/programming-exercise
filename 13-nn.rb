@@ -2,10 +2,10 @@
 
 print "请输入数字 N，然后按 Enter: "
 n = gets
-
-# while ( ... )
-#   while ( ...)
-#
-#   end
-# end
-
+n = n.to_i
+ while ( n >= 1 )
+   while (n - 1 >= 1)
+     puts "#{n} * #{n-1} = #{n * (n-1)}"
+     n = n - 1
+   end
+ end

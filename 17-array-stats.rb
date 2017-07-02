@@ -14,7 +14,25 @@ end
 
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+sum = eval arr.join('+')
+
+for i in arr
+   i+=i
+end
+
+avg = (i / arr.size).to_f
+
+max = arr.max
+min = arr.min
+
+puts "总和是  #{sum}"
+puts "平均是 #{avg}"
+puts "最大值是#{max}"
+puts "最小值是#{min}"
+
+# --- 求和的第二种写法 ---
+# for i in arr
+#    i+=i
+# end
+# --- 求和的第三种写法 ---
+#arr.each { |a| sum+=a }
