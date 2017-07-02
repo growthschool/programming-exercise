@@ -12,16 +12,12 @@ print "请输入一个数字z，然后按 Enter: "
 z = gets
 z1 = z.to_i
 
-if x1 >= y1
-  a = x1
+if x1 >= y1 && x1 >= z1
+  max = x1
+elsif y1 >= x1 && y1 >= z1
+  max = y1
 else
-  a = y1
+  max = z1
 end
 
- if a >= z1
-   b = a
- else
-   b = z1
- end
-
-puts "最大的数是#{b}"
+puts "最大的数是#{max}"
