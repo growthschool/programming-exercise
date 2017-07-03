@@ -6,10 +6,12 @@ while (true)
   print "请猜一个 0~99 的数字 N，然后按 Enter: "
   n = gets
 
-  #puts "太低了，再猜一次"
-  #puts "太高了，再猜一次"
-
-  if n.to_i == target
+  case n.to_i
+  when 0...target
+    puts "太低了，再猜一次"
+  when target+1..100
+    puts "太高了，再猜一次"
+  when target
     puts "恭喜猜中啦! "
     break
   end

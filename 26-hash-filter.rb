@@ -8,9 +8,14 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
-
-puts "所有成年人，并由小到大: _________"
+len = arr.length
+[*0...len-1].each do |i|
+  [*i+1...len].each do |j|
+    arr[i],arr[j] = arr[j],arr[i] if arr[i]["age"] > arr[j]["age"]
+  end
+end
+puts arr
+puts "所有成年人，并由小到大: #{arr}"
 
 # 答案应该是
 #[

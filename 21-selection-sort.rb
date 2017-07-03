@@ -2,7 +2,13 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def insertion_sort(arr)
-  #...
+  len = arr.length
+  [*0...len-1].each do |i|
+    [*i+1...len].each do |j|
+      arr[i],arr[j] = arr[j],arr[i] if arr[j] < arr[i]
+    end
+  end
+  return arr
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
