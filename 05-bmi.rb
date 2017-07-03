@@ -12,7 +12,7 @@ print "请输入您的身高(厘米)，然后按 Enter: "
 height = gets
 height = height.to_f
 
-bmi = weight / (height / 100) ** 2
+bmi = (weight / (height / 100) ** 2).floor
 
 if bmi < 18.5
   result = "过轻"
