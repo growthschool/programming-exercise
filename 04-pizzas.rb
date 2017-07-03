@@ -11,5 +11,6 @@ people = people.to_i
 get = pizzas / people
 left = pizzas % people
 
+
 puts "每人可分得几片: #{get} 片"
 puts "还剩下几片: #{left} 片"
