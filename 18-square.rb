@@ -2,9 +2,14 @@
 
 arr = []
 
+def array_squ(a)
+  a -= 1
+  (0..a).map { |a| a**2 }
+end
+
 print "请输入数字 N，然后按 Enter: "
 n = gets
-
-# ...
+n = n.to_i
+arr = array_squ(n)
 
 puts arr.to_s
