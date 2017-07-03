@@ -8,9 +8,14 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
+def filter(hsh)
+  hsh = hsh.select { |h| h["age"] >= 18 }
+  hsh.sort_by { |h| h["age"] }
+end
 
-puts "所有成年人，并由小到大: _________"
+arr = filter(arr)
+
+puts "所有成年人，并由小到大: ____#{arr}_____"
 
 # 答案应该是
 #[

@@ -3,7 +3,11 @@
 i = 1
 while ( i <= 100 )
 
-  # ....
+  j = i % 7
+
+  if j == 0
+    puts "#{i}"
+  end
 
   i+=1
 end
