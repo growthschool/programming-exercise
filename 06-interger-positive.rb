@@ -4,7 +4,19 @@
 print "请输入一个整数，然后按 Enter: "
 x = gets
 
-# ....
+if x.to_i < 0
+  positivity = "负数"
+elsif x.to_i == 0
+  positivity = "零"
+else
+  positivity = "正数"
+end
 
-puts "这个数是_____ (正数或零或负数)"
-puts "这个数是_____ (偶数或奇数)"
+if x.to_i.odd?
+  odd = "奇数"
+else
+  odd = "偶数"
+end
+
+puts "这个数是#{positivity}"
+puts "这个数是#{odd}"
