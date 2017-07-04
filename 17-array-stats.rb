@@ -12,9 +12,20 @@ while (true)
   end
 end
 
+t = 0
+arr.each do |i|
+  t += i
+end
+
+avrg = t.to_f / arr.size
+
+max = arr.max
+
+min = arr.min
+
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+puts "总和是 __#{t}___"
+puts "平均是 __#{avrg}___"
+puts "最大值是 __#{max}___"
+puts "最小值是 __#{min}___"
