@@ -3,6 +3,4 @@
 print "请输入你的名字，然后按 Enter: "
 your_name = gets
 
-# ...
-
 puts "Hello, #{your_name}"

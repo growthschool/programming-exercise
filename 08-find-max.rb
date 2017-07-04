@@ -15,11 +15,11 @@ z = z.to_f
 
 # r = [x, y, z].max
 
-if x > y && x > z
+if (x > y) && (x > z)
   r = "x"
-elsif y > x && y > z
+elsif (y > x) && (y > z)
   r = "y"
-elsif z > x && z > y
+elsif (z > x) && (z > y)
   r = "z"
 end
 
