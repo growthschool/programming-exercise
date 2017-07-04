@@ -6,5 +6,10 @@ print "请输入数字 N，然后按 Enter: "
 n = gets
 
 # ...
+for i in 0...n.to_i do
+  arr << i * i
+end
+
+
 
 puts arr.to_s
