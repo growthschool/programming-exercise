@@ -2,6 +2,8 @@
 # Hint: 可用 arr.sort 排序，和 arr.uniq 去除重复
 
 def filter_even(arr)
+
+
   arr2 = []
   arr.each do |i|
     if i % 2 == 0
@@ -12,6 +14,5 @@ def filter_even(arr)
 end
 
 arr =  [7, 68, 42, 46, 12, 9, 91, 12, 77, 46, 86, 1]
-
 
 puts "#{filter_even(arr)}" # 应该是 [42, 46, 68, 86]
