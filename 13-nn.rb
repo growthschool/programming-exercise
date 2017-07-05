@@ -9,8 +9,11 @@ j = 0
 while i<= n.to_i
   while j<= n.to_i
     puts "#{i}*#{j}=#{i*j}"
+    j+= 1
   end
-  
+  i+= 1
+  j= 0
+
 end
 
 
