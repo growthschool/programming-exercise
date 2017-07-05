@@ -6,5 +6,9 @@ print "请输入数字 N，然后按 Enter: "
 n = gets
 
 # ...
-
+i = 0
+while i < n.to_i
+  arr << i*i
+  i+= 1
+end
 puts arr.to_s
