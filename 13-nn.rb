@@ -3,22 +3,16 @@
 print "请输入数字 N，然后按 Enter: "
 n = gets
 
-i = 2
-max = n.to_i/2
+i = 0
+j = 0
 
-while i<= max
-   if n.to_i % i == 0
-     puts "n 不是质数"
-     break
-   end
-
-   if i == max
-     puts "n 是质数"
-   end
-   i+= 1
-
-  #  puts "#{i}"
+while i<= n.to_i
+  while j<= n.to_i
+    puts "#{i}*#{j}=#{i*j}"
+  end
+  
 end
+
 
 # while ( ... )
 #   while ( ...)

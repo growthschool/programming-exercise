@@ -1,6 +1,20 @@
 # 输入一个数字 N，请检查是不是质数
 
 def is_prime(n)
+  i = 2
+
+  while i<= n/2
+     if n.to_i % i == 0
+       return n.to_i % i >0
+       break
+     end
+
+     if i == n/2
+       return n.to_i % i >0
+     end
+     i+= 1
+    #  puts "#{i}"
+  end
 # ....
 end
 
