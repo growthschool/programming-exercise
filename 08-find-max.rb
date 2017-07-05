@@ -9,6 +9,18 @@ y = gets
 print "请输入一个数字z，然后按 Enter: "
 z = gets
 
-# ....
+x = x.to_f
+y = y.to_f
+z = z.to_f
 
-puts "最大的数是 ________(x或y或z)"
+# r = [x, y, z].max
+
+if (x > y) && (x > z)
+  r = "x"
+elsif (y > x) && (y > z)
+  r = "y"
+elsif (z > x) && (z > y)
+  r = "z"
+end
+
+puts "最大的数是 ____#{r}____(x或y或z)"
