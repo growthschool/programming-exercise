@@ -11,20 +11,26 @@ todos.each_with_index do |todo, index|
   puts "#{index}: #{todo}"
 end
 
+
 while (true)
   print "请输入指令 1. add 2. remove 3. save，然后按 Enter: "
   command = gets.chomp
 
-  if command == "add"
+
+  if command == "add" || command == "1"
     print "请输入代办事项: "
-    # ...
-  elsif command == "remove"
+    todos << gets.chomp
+  elsif command == "remove" || command == "2"
     print "请输入要删除的编号: "
-    # ...
-  elsif command == "save"
+    todos.delete_at(gets.chomp.to_i)  # 输入的东西全是字符串，需要转化
+  elsif command == "save" || command == "3"
     puts "存盘离开"
 
-    # ...
+    File.open("todos.txt", "w+") do |f|
+
+      f << todos.join("\n")  #将数组转化为字符串
+    end
+
     break;
   else
     puts "看不懂，请再输入一次"
