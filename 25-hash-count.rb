@@ -3,7 +3,14 @@
 def count(arr)
   h = {}
 
+  j = 1
+  count = 0
   arr.each do |i|
+    while j< arr.size
+      if i == arr[j]
+        count +=1
+      end
+    end
     # ...
   end
 
@@ -15,4 +22,3 @@ arr =  ["a", "d", "d", "c", "b", "c", "c", "c", "d", "d", "e", "e", "e", "d", "a
 answer = count(arr)
 
 puts answer # 答案应该是 {"a"=>3, "d"=>6, "c"=>5, "b"=>1, "e"=>5}
-
