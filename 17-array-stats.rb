@@ -14,7 +14,40 @@ end
 
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+def find_sum(array)
+  sum = 0
+  array.each do |arr|
+    sum += arr
+  end
+  return sum
+end
+
+def find_max(array)
+  max = array.first
+  array.each do |arr|
+    if max < arr
+      max = arr
+    end
+  end
+  return max
+end
+
+def find_min(array)
+  min = array.first
+  array.each do |arr|
+    if min > arr
+      min = arr
+    end
+  end
+  return min
+end
+
+sum =  find_sum(arr)
+avg =  sum.to_f/ arr.size
+max =  find_max(arr)
+min =  find_min(arr)
+
+puts "总和是 #{sum}"
+puts "平均是 #{avg}"
+puts "最大值是 #{max}"
+puts "最小值是 #{min}"

@@ -8,9 +8,39 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
+def find_adult(arr)
+  arr_adult = []
+  max_value = 0
+  arr.each do |array|
+    # puts array
+    array.each do |key,value|
+      if value.to_i > 18 && value.to_i > max_value
+
+        arr_adult.push(array)
+        max_value = value.to_i
+      elsif value.to_i >18 &&  value.to_i < max_value
+        arr_adult.unshift(array)
+        puts value
+        # puts arr_adult
+      end
+    end
+    # if array["age"]>18
+    #   if array["age"] > arr_adult.first["age"]
+    #     arr_adult.push(array)
+    #   else
+    #     arr_adult.unshift(array)
+    #   end
+    # end
+
+  end
+  return arr_adult
+end
+
+answer = find_adult(arr)
 # ....
 
-puts "所有成年人，并由小到大: _________"
+puts "所有成年人，并由小到大: #{answer}"
+
 
 # 答案应该是
 #[
