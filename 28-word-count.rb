@@ -2,4 +2,29 @@
 
 doc = File.read("wordcount.txt")
 
-# ...
+def count(arr)
+  h = {}
+  i = 0
+  n = arr.size
+
+  while (i < n)
+    a = arr.first
+    value = 0
+    arr.each do |i|
+      if a == i
+        value +=1
+      end
+      h[i] = value
+    end
+    arr = arr - [a]
+    i += 1
+  end
+
+  return h # 回传一个 hash
+end
+
+answer = count(doc.split(" "))
+#双引号内若是什么也米有，则输出的数组为一个一个的字母以及空格
+#在双引号里输入空格得到的才是 一个个的单词
+
+puts answer

@@ -2,7 +2,24 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def insertion_sort(arr)
-  #...
+  n = arr.size
+  x=0
+  b = []
+  while (x < n)
+    a = arr.first
+    ai = 0
+    arr.each_with_index do |i, j|
+      if a > i
+         a = i
+         ai = j
+       end
+    end
+    b << a
+    arr.delete_at(ai)
+    x += 1
+  end
+  b
+
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
