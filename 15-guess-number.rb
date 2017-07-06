@@ -8,8 +8,11 @@ while (true)
 
   #puts "太低了，再猜一次"
   #puts "太高了，再猜一次"
-
-  if n.to_i == target
+  if n.to_i < target
+    puts "太低了，再猜一次"
+  elsif n.to_i > target
+    puts "太高了，再猜一次"
+  else
     puts "恭喜猜中啦! "
     break
   end

@@ -5,7 +5,7 @@ while ( i <= 100 )
 
   # ....
   if i % 7 == 0
-    puts "#{i}"
+    puts i
   end
 
   i+=1
