@@ -19,4 +19,26 @@ z = gets
 
 # ....
 
-puts "结果是________(A或B或C或D或E)"
+def test(x,y,z)
+  if x < 0
+    "A"
+  else
+    if y > 0
+      if z > 0
+        "B"
+      else
+        "C"
+      end
+    else
+      if z > 0
+        "D"
+      else
+        "E"
+      end
+    end
+  end
+end
+
+result = test(x.to_i, y.to_i, z.to_i)
+
+puts "结果是#{result}"
