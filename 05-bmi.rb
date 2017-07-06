@@ -12,6 +12,20 @@ height = gets
 
 # .....
 
-puts "您的 BMI 是: _________"
+bmi =  weight.to_f / ((height.to_f/100) * (height.to_f/100))
 
-puts "您的 BMI 结果是: _________(过轻或正常或过重)"
+puts "您的 BMI 是: ____#{bmi}_____"
+
+if bmi < 18.5
+
+  puts "您的 BMI 结果是: ___过轻____"
+
+elsif bmi >= 24
+
+  puts "您的 BMI 结果是: ___过重____"
+
+else bmi > 18.5 && bmi < 24
+
+  puts "您的 BMI 结果是: ___正常____"
+
+end
