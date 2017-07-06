@@ -2,7 +2,9 @@
 
 i = 1
 while ( i <= 100 )
-
+  if i.to_i % 7 == 0
+    puts i
+  end
   # ....
 
   i+=1
