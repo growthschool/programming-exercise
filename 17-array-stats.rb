@@ -14,7 +14,23 @@ end
 
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+m = 0
+x = arr[0]
+y = arr[0]
+
+for i in arr
+  m = i + m
+  if i > x
+    x = i
+  end
+  if i < y
+    y = i
+  end
+end
+n = arr.size
+k = (m.to_f/n.to_f).round(2)
+
+puts "总和是#{m}"
+puts "平均是 #{k}"
+puts "最大值是#{x}"
+puts "最小值是#{y}"
