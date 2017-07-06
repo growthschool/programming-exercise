@@ -9,4 +9,4 @@ b = gets.to_i
 area = a*b / 2
 # .....
 
-puts "直角三角形的面积是: "  + area.to_s 
+puts "直角三角形的面积是: "  + area.to_s
