@@ -2,6 +2,9 @@
 
 def filter_even(arr)
   #...
+  arr_even = []
+  arr.each {|x| arr_even << x if x % 2 == 0}
+  arr_even
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
