@@ -9,8 +9,12 @@ arr = [
 ]
 
 # ....
+arr_adult =[]
+arr.each {|x| arr_adult << x if x["age"].to_i >= 18 }
+arr_adult.sort!{|x,y| x["age"] <=> y["age"] }
+# sorted_arr = arr.to_s
 
-puts "所有成年人，并由小到大: _________"
+puts "所有成年人，并由小到大: #{arr_adult}"
 
 # 答案应该是
 #[
