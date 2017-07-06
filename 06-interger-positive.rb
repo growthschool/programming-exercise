@@ -6,5 +6,26 @@ x = gets
 
 # ....
 
-puts "这个数是_____ (正数或零或负数)"
-puts "这个数是_____ (偶数或奇数)"
+if x.to_i > 0
+
+  puts "这个数是__正数__ "
+
+elsif x.to_i == 0
+
+  puts "这个数是__零__"
+
+else x.to_i < 0
+
+  puts "这个数是__负数__"
+
+end
+
+if x.to_i % 2 == 1
+
+  puts "这个数是__奇数__"
+
+elsif x.to_i % 2 == 0
+
+  puts "这个数是__偶数__"
+
+end
