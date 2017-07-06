@@ -10,11 +10,4 @@ for i in 0..m
   arr[i] = i*i
 end
 
-
-arr[0] = 0*0
-arr[1] = 1*1
-arr[2] = 2*2
-
-
-
 puts arr.to_s
