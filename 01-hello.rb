@@ -6,3 +6,9 @@ your_name = gets
 # ...
 
 puts "(请替换成最后的答案)"
+
+def hello(name)
+  puts "Hello, #{name}"
+end
+
+hello "qinshouli"
