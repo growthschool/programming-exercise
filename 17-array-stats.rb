@@ -12,9 +12,47 @@ while (true)
   end
 end
 
+def sum(array)
+  a = 0
+  array.each do |i|
+    a += i
+  end
+  a
+end
+
+def average(array)
+  x = 0
+  y = 0
+  array.each do |i|
+    x += i
+    y = x/array.size
+  end
+  y
+end
+
+def max(array)
+  a = 0
+  array.each do |i|
+    if a < i
+      a = i
+    end
+  end
+  a
+end
+
+def min(array)
+  a = array.first
+  array.each do |i|
+    if a > i
+      a = i
+    end
+  end
+  a
+end
+
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+puts "总和是 __#{sum(arr)}___"
+puts "平均是 __#{average(arr)}___"
+puts "最大值是 _#{max(arr)}____"
+puts "最小值是 _#{min(arr)}____"
