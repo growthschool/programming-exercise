@@ -4,7 +4,10 @@ arr = []
 
 print "请输入数字 N，然后按 Enter: "
 n = gets
+m = (n.to_i)-1
 
-# ...
+for i in 0..m
+  arr[i] = i*i
+end
 
 puts arr.to_s

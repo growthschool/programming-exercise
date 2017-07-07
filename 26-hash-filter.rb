@@ -8,7 +8,18 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
+#遍历数组
+#删除18岁以下
+#剩下的排序
+ar = []
+for i in 0..4
+  if arr[i]["age"] > 18
+    ar[i] = arr[i]
+  end
+end
+puts ar.order("age" DESC)
+
+
 
 puts "所有成年人，并由小到大: _________"
 
