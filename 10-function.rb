@@ -1,6 +1,13 @@
 # 题目: 使用者输入 x,y,z，请输出三个数中最大的数
 
 def find_max(x, y, z)
+  if x > y && x > y
+    e = x
+  elseif y > x && y > z
+  e = y
+else z > x && z > y
+  e = z
+end
 end
 
 print "请输入一个数字x，然后按 Enter: "
