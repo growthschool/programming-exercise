@@ -5,4 +5,4 @@ your_name = gets
 
 # ...
 
-puts "你好，" + your_name
+puts "你好，#{your_name}"
