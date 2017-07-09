@@ -9,3 +9,6 @@ n = gets
 #   end
 # end
 
+a = n.to_f * n.to_f
+
+puts "#{a}"
