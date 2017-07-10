@@ -9,7 +9,7 @@ m = 0
  end
 end
 
-"#{m}"
+m
 
 end
 
