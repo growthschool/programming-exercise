@@ -8,7 +8,15 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
+a = []
+for i in arr
+  if i["age"] >= 18
+    a << i
+  end
+end
 
+result = []
+result = a.sort_by{ |i| i["age"]}
 
 puts "所有成年人，并由小到大: #{result}"
 
