@@ -8,7 +8,6 @@ n = gets
 #
 #   end
 # end
-
 N = n.to_i
 i = 0
 j = 0
