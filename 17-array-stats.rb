@@ -4,6 +4,7 @@ arr = []
 
 while (true)
   print "请输入数字，结束请直接按 Enter: "
+  
   user_input = gets
   if user_input == "\n"
     break
