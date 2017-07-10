@@ -3,9 +3,16 @@
 
 def filter_even(arr)
   #...
+  arr2 = []
+
+  arr.each do |i|
+    if i % 2 == 0
+      arr2.push(i)
+    end
+  end
+  arr2.sort.uniq
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
 
-
-puts "________" # 应该是 [42, 46, 68, 86]
+puts "__#{filter_even(arr)}______" # 应该是 [42, 46, 68, 86]
