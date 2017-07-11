@@ -13,8 +13,6 @@ y = y.to_i
 z = z.to_i
 mmm = "nil"
 max = 0
-mid = 0
-min = 0
 
 if x > y
   max = x
