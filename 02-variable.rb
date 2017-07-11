@@ -3,8 +3,8 @@
 a = 1
 b = 2
 
-puts "a 是 #{a}"
-puts "b 是 #{b}"
+puts "a = #{b}"
+puts "b = #{a}"
 
 # ...
 
