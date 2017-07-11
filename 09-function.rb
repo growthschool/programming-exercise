@@ -1,7 +1,10 @@
 # 题目: 输入直角三角形的宽和高，输出三角形的面积
 
 def calculate_area(a, b)
-  # ....
+  a = a.to_i
+  b = b.to_i
+  s = 0
+  s = a*b*0.5
 end
 
 print "请输入直角三角形的高，然后按 Enter: "
