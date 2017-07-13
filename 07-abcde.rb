@@ -18,5 +18,20 @@ print "请输入一个整数z，然后按 Enter: "
 z = gets
 
 # ....
+x = x.to_i
+y = y.to_i
+z = z.to_i
 
-puts "结果是________(A或B或C或D或E)"
+ if x < 0
+  p = "A"
+ elsif x > 0 && y > 0 && z > 0
+   p = "B"
+ elsif x > 0 && y > 0 && z < 0
+   p = "C"
+ elsif x > 0 && y < 0 && z > 0
+   p = "D"
+ elsif x > 0 && y < 0 && z < 0
+   p = "E"
+ end
+
+ puts "结果是 #{p}"
