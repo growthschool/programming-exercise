@@ -12,7 +12,15 @@ y = gets
 print "请输入一个数字z，然后按 Enter: "
 z = gets
 
-# ....
+def find_max(x, y, z)
+  m = 0
+  [x, y, z].each do |i|
+    if i.to_f > m
+      m = i.to_f
+    end
+  end
+  return m
+end
 
 answer = find_max(x,y,z)
 
