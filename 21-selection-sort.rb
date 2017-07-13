@@ -2,11 +2,28 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def insertion_sort(arr)
-  #...
+  min = 0
+  box = 0
+  length = arr.size
+  arr.each_with_index do |i, j|
+    while j < length
+      min_index = j
+      k = j+1
+      while k < length - 1
+        if arr[min_index] > arr[k]
+          min_index = k
+          box = arr[min_index]
+          arr[min_index] = arr[k]
+          arr[k] = box
+        end
+      end
+    end
+  end
+  return arr
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
 
-answer = insertion_sort(arr)
+answer = insertion_sort(arr).to_s
 
 puts answer.to_s # 应该是 [1, 7, 9, 42, 46, 46, 68, 77, 86, 91]
