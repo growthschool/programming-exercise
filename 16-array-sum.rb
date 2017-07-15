@@ -7,7 +7,7 @@ def find_max(array)
       m = i
     end
   end
-  m 
+  m
 end
 
 arr = [8, 12, 36, 53, 9, 75, 3, 71, 59, 88]
