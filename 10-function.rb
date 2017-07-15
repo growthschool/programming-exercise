@@ -6,7 +6,7 @@ def find_max(x, y, z)
   elsif y>= x && y >= z
     return y
   else
-    return z 
+    return z
   end
 end
 
