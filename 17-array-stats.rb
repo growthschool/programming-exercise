@@ -8,7 +8,7 @@ while (true)
   if user_input == "\n"
     break
   else
-    arr << user_input.to_igit
+    arr << user_input.to_i
   end
 end
 
