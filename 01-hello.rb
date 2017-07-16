@@ -5,4 +5,5 @@ your_name = gets
 
 # ...
 
-puts "hello, xiaobo"
+puts "Hello, xibo"
+
