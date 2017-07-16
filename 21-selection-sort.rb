@@ -4,20 +4,25 @@
 def insertion_sort(arr)
   min = 0
   box = 0
+  box_1 = 0
   length = arr.size
-  arr.each_with_index do |i, j|
+  j = 0
     while j < length
       min_index = j
       k = j+1
       while k < length - 1
-        if arr[min_index] > arr[k]
+        if arr[min_index] > arr[min_index+1]
           min_index = k
           box = arr[min_index]
-          arr[min_index] = arr[k]
+          box_1 = arr[k]
+          arr[min_index] = box_1
           arr[k] = box
+          j+=1
+        else
+          arr[min_index]
+          arr[k] = arr[min_index+1]
         end
       end
-    end
   end
   return arr
 end
