@@ -10,5 +10,6 @@ while ( i <= 100 )
   	total += i
 end
    i+=1
+end
 
 puts total
