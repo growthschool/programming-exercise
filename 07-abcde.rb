@@ -9,7 +9,7 @@
 #     当 z < 0 输出 "E"
 
 print "请输入一个整数x，然后按 Enter: "
-x = gets
+x = gets.to_f
 
 print "请输入一个整数y，然后按 Enter: "
 y = gets
@@ -17,6 +17,30 @@ y = gets
 print "请输入一个整数z，然后按 Enter: "
 z = gets
 
-# ....
 
-puts "结果是________(A或B或C或D或E)"
+y = y.to_f
+z = z.to_f
+
+if x < 0
+	result = "A"
+end
+
+if x > 0
+	if y > 0
+		if z > 0
+			puts "B"
+		end
+		if z < 0
+			puts "C"
+		end
+	end
+
+	if y < 0
+		if z > 0
+			puts "D"
+		end
+		if z < 0
+			puts "E"
+		end
+	end
+end
