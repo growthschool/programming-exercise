@@ -17,14 +17,22 @@ while (true)
 
   if command == "add"
     print "请输入代办事项: "
-    # ...
+    item = gets.chomp
+    result = todos << item
+    puts "你已经添加#{result}"
   elsif command == "remove"
     print "请输入要删除的编号: "
-    # ...
+    index = gets.to_i
+    result = todos.delete_at(index)
+    puts "你已经删除了index为#{index},的#{result}"
   elsif command == "save"
     puts "存盘离开"
 
-    # ...
+    File.open("todos.txt", "w+") do |f|
+      todos.each do |item|
+        f << "#{item}\n"
+      end
+    end
     break;
   else
     puts "看不懂，请再输入一次"
