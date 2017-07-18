@@ -2,7 +2,7 @@
 
 def find_even_keys(hash)
 
-  # ... (请回传一个数组)
+	hash.select { |k,v| v % 2 == 0 }.keys
 
 end
 
