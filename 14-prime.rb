@@ -7,6 +7,20 @@ end
 print "请输入数字 N，然后按 Enter: "
 n = gets
 
+def is_prime(n)
+	i = 2
+	while i <= n/2
+
+		if n % i == 0
+			return false
+		end
+
+		i += 1
+	end
+
+	return true
+end
+
 if is_prime(n.to_i)
   puts "这是质数"
 else
