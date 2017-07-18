@@ -8,9 +8,9 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
+result = arr.select{|i| i["age"] > 18 }.sort{|a,b| a["age"] <=> b["age"] }
 
-puts "所有成年人，并由小到大: _________"
+puts "所有成年人，并由小到大: #{result}"
 
 # 答案应该是
 #[
