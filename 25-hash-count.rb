@@ -4,7 +4,8 @@ def count(arr)
   h = {}
 
   arr.each do |i|
-    # ...
+    a = arr.count(i)
+    h[i] = a
   end
 
   return h # 回传一个 hash
