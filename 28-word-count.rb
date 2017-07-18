@@ -2,4 +2,20 @@
 
 doc = File.read("wordcount.txt")
 
-# ...
+words = doc.downcase.gsub(/(n['’]t\b)|\p{p}/, '\1').split(" ")
+
+def word_count(words)
+
+	frequency = {}
+	words.each do |word|
+		count = words.count(word)
+		frequency[word] = count
+	end
+
+	return frequency
+
+end
+
+result = word_count(words)
+
+puts result
