@@ -1,7 +1,19 @@
 # 给定一 Hash，输出有最大 value 的 key
 
 def find_max(hash)
-  # ...
+   value = hash.values
+   size = value.size
+
+   j = 1
+   max = value[0]
+   while j < size
+   	if max < value[j]
+   		max = value[j]
+   	end
+   	j += 1
+end
+
+hash.key(max)
 end
 
 h = {
