@@ -19,4 +19,16 @@ z = gets
 
 # ....
 
-puts "结果是________(A或B或C或D或E)"
+puts "结果是:"
+
+  if x.to_f < 0
+    puts "A"
+  elsif x.to_f > 0 && y.to_f > 0 && z.to_f > 0
+    puts "B"
+  elsif x.to_f > 0 && y.to_f > 0 && z.to_f < 0
+    puts "C"
+  elsif x.to_f > 0 && y.to_f < 0 && z.to_f > 0
+    puts "D"
+  else 
+    puts "E"
+  end
