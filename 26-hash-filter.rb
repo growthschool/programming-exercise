@@ -8,9 +8,29 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
+result = []
 
-puts "所有成年人，并由小到大: _________"
+a = []
+for i in arr
+	a << i["age"]
+end
+
+b = []
+for j in a 
+	if j > 18
+		b << j
+	end
+end
+
+for k in arr
+	if b.include?(k["age"])
+		result << k
+	end
+end
+
+result = result.sort_by{ |i| i["age"]}
+
+puts "#{result}"
 
 # 答案应该是
 #[
