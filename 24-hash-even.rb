@@ -2,8 +2,21 @@
 
 def find_even_keys(hash)
 
-  # ... (请回传一个数组)
+  value = hash.values
+  a = []
+  for i in value
+  	if i % 2 == 0
+  		a << i
+  	end
+  end
 
+  b = []
+  for j in a
+  	c = hash.key(j)
+  	b << c
+  end
+  return b
+  
 end
 
 h = {

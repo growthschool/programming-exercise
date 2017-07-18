@@ -3,8 +3,9 @@
 def count(arr)
   h = {}
 
-  arr.each do |i|
-    # ...
+   arr.uniq.each do |i|
+   	k = arr.count(i)
+   	h[i] = k
   end
 
   return h # 回传一个 hash
