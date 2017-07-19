@@ -2,6 +2,7 @@
 
 def find_missing(arr)
   # ...
+  (0..9).to_a - arr.uniq
 end
 
 answer = find_missing( [2,2,1,5,8,4] )
