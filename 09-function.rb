@@ -2,6 +2,7 @@
 
 def calculate_area(a, b)
   # ....
+  a * b / 2
 end
 
 print "请输入直角三角形的高，然后按 Enter: "
@@ -10,6 +11,6 @@ a = gets
 print "请输入直角三角形的底边，然后按 Enter: "
 b = gets
 
-answer = calculate_area(a,b)
+answer = calculate_area(a.to_f,b.to_f)
 
 puts "直角三角形的面积是: #{answer}"

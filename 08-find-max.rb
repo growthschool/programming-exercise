@@ -11,4 +11,17 @@ z = gets
 
 # ....
 
-puts "最大的数是 ________(x或y或z)"
+def max_three(x,y,z)
+  m = x
+  if y > x
+    m = y
+  else
+    if z > m
+      m = z
+    end
+  end
+end
+
+result = max_three(x.to_i, y.to_i, z.to_i)
+
+puts "最大的数是#{result}"

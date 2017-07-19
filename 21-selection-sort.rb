@@ -3,6 +3,16 @@
 
 def selection_sort(arr)
   #...
+  for i in 0...arr.size
+    for j in i...arr.size
+      a = arr[i]
+      if arr[j] < a
+        arr[i] = arr[j]
+        arr[j] = a
+      end
+    end
+  end
+  arr
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]

@@ -2,6 +2,14 @@
 
 def find_missing(arr)
   # ...
+  number = [0,1,2,3,4,5,6,7,8,9]
+  missing = []
+  for i in 0...number.size
+    if !arr.include?(number[i])
+      missing << number[i]
+    end
+  end
+  missing
 end
 
 answer = find_missing( [2,2,1,5,8,4] )

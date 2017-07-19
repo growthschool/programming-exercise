@@ -3,8 +3,11 @@
 arr = []
 
 print "请输入数字 N，然后按 Enter: "
-n = gets
+n = gets.to_i
 
 # ...
-
+for i in 0...n
+  arr << i**2
+  i += 1
+end
 puts arr.to_s
