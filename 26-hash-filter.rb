@@ -8,9 +8,31 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
+def find_adult(array)
+  h = []
+  i = 0
+  n = array.size
+  while (i < n)
+    b = array.first
+    c = 0
+    array.each_with_index do |i, j|
+      if b["age"] > i["age"]
+        b = i
+        c = j
+      end
+    end
+    if b["age"] > 17
+      h << b
+    end
+      array.delete_at(c)
+      i += 1
+  end
+  return h
+end
 
-puts "所有成年人，并由小到大: _________"
+answer = find_adult(arr)
+
+puts "所有成年人，并由小到大: _#{answer}________"
 
 # 答案应该是
 #[
