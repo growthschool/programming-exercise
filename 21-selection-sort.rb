@@ -2,7 +2,19 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def insertion_sort(arr)
-  #...
+  for i in 0..(arr.size-2)
+    min=i
+    for j in (i+1)..(arr.size-1)
+      if arr[min]>arr[j]
+        min = j
+      end
+      temp=arr[min]
+      arr[min]=arr[i]
+      arr[i]=temp
+    end
+  end
+  return arr
+
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
