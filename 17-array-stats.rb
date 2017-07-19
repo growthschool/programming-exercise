@@ -14,7 +14,47 @@ end
 
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+
+def total(array)
+  x = 0
+  i = 0
+  while i < array.size
+    x += array[i]
+    i += 1
+  end
+  return x
+end
+
+def find_max(array)
+  x = 0
+  i = 0
+  while i < array.size
+    if x < array[i]
+      x = array[i]
+    end
+    i += 1
+  end
+  return x
+end
+
+def find_min(array)
+  x = array[0]
+  i = 0
+  while i < array.size
+    if x > array[i]
+      x = array[i]
+    end
+    i += 1
+  end
+  return x
+end
+
+total = total(arr)
+average_value = total/(arr.size).to_f
+max = find_max(arr)
+min = find_min(arr)
+
+puts "总和是#{total}"
+puts "平均是 #{average_value}"
+puts "最大值是#{max}"
+puts "最小值是#{min}"
