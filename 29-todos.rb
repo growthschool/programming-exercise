@@ -31,11 +31,12 @@ while (true)
         f << "\n"
       end
     end
+    #这样写入的时候，之前todos.rb中的内容会不会抹掉呢？
 
     todos.each_with_index do |todo, index|
       puts "#{index}: #{todo}"
     end
-    
+
     break;
   else
     puts "看不懂，请再输入一次"
