@@ -5,6 +5,15 @@ arr = []
 print "请输入数字 N，然后按 Enter: "
 n = gets
 
-# ...
+  a = 0
+while(true)
+  if a <= n.to_i - 1
+  arr<< a*a
+  a = a + 1
+  else
+    break
+  end
+end
+
 
 puts arr.to_s
