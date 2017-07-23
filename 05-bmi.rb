@@ -8,20 +8,20 @@ print "请输入您的体重(公斤)，然后按 Enter: "
 weight = gets.to_f
 
 print "请输入您的身高(厘米)，然后按 Enter: "
-height = gets.to_f
+height = (gets.to_f)/100
 
-print "请输入您的的姓名"
-name = gets
+
 
 bmi = weight/(height * height)
 
 puts "您的 BMI 是: #{bmi}"
+
 if bmi < 18.5
-  print "你的体重过轻"
+  result = "你的体重过轻"
 elsif bmi >= 24
-  print "你的体重过重"
-elsif 18.5< bmi <= 24
-  print "您的体重正常"
+  result = "你的体重过重"
+else 
+  result = "您的体重正常"
 end
 
-puts "#{name}你好，您的 BMI 结果是: _________(过轻或正常或过重)"
+print "你好，您的 BMI 结果是: #{result}"
