@@ -8,10 +8,34 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
+def result(arr)
+  new_hash = []
+  arr.each do |h|
+     if h["age"] >= 18
+       new_hash.push(h)
+     end
+   end
+   new_hash.sort_by {|i| i["age"]}
+end
+puts "所有成年人，并由小到大: #{result(arr)}"
 
-puts "所有成年人，并由小到大: _________"
 
+# def filter(arr)
+#    result_arr = []
+#
+#  -puts "所有成年人，并由小到大: _________"
+#    arr.each do |h|
+#      if h["age"] >= 18
+#        result_arr.push(h)
+#      end
+#    end
+#
+#    result_arr.sort_by { |i| i["age"] }
+#  end
+#
+#
+#
+#  puts "所有成年人，并由小到大: #{filter(arr)}"
 # 答案应该是
 #[
 #  { "name" => "Steven", "age" => 22 },
