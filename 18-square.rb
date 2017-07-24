@@ -10,5 +10,4 @@ n = gets().to_i
 end
 
 # ...
-
 puts arr.to_s
