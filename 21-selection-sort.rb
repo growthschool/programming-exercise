@@ -2,7 +2,24 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def selection_sort(arr)
-  #...
+
+n = arr.size
+x = 0
+a = []
+while x < n
+  b = arr.first
+  bi = 0
+  arr.each_with_index do |i, j|
+    if b > i
+      b = i
+      bi = j
+    end
+  end
+  a << b
+  arr.delete_at(bi)
+  x += 1
+end
+a
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
