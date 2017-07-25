@@ -2,6 +2,12 @@
 
 def find_missing(arr)
   # ...
+  missing_arr = []
+
+  (0..9).each do |i|
+    missing_arr << i unless arr.include?(i)
+  end
+  missing_arr
 end
 
 answer = find_missing( [2,2,1,5,8,4] )
