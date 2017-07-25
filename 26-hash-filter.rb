@@ -8,9 +8,22 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
 
-puts "所有成年人，并由小到大: _________"
+def small(arr)
+  array = []
+  a = []
+  arr.each do |i|
+    if i["age"]>=18
+      array << i
+    end
+  end
+  a = array.sort{|x,y| x["age"] <=> y["age"]}
+  return a
+
+end
+
+
+puts "所有成年人，并由小到大: #{small(arr)}"
 
 # 答案应该是
 #[
