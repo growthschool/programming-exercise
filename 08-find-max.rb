@@ -10,5 +10,16 @@ print "请输入一个数字z，然后按 Enter: "
 z = gets
 
 # ....
-
-puts "最大的数是 ________(x或y或z)"
+if "#{x}" >= "#{y}"
+  if "#{z}" >= "#{x}"
+    puts "最大的数是#{z}"
+  elsif "#{x}" >= "#{z}"
+    puts "最大的数是#{x}"
+  end
+elsif "#{y}" >= "#{x}"
+  if "#{y}" >= "#{z}"
+    puts "最大的数是#{y}"
+  elsif "#{z}" >= "#{y}"
+    puts "最大的数是#{z}"
+  end   
+end
