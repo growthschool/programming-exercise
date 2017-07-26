@@ -10,6 +10,12 @@ a = gets
 print "请输入直角三角形的底边，然后按 Enter: "
 b = gets
 
+def calculate_area(a,b)
+(a.to_i*b.to_i)/2
+end
+
 answer = calculate_area(a,b)
+
+
 
 puts "直角三角形的面积是: #{answer}"
