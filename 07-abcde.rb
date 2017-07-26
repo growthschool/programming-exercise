@@ -9,14 +9,33 @@
 #     当 z < 0 输出 "E"
 
 print "请输入一个整数x，然后按 Enter: "
-x = gets
+a = gets
 
 print "请输入一个整数y，然后按 Enter: "
-y = gets
+b = gets
 
 print "请输入一个整数z，然后按 Enter: "
-z = gets
+c = gets
 
+x = a.to_i
+y = b.to_i
+z = c.to_i 
 # ....
+if x < 0
+  var = "A"
+elsif x > 0; y > 0
+  if z > 0
+    var = "B"
+  else
+    var = "C"
+  end
+elsif x > 0 ;y < 0
+  if z > 0
+    var = "D"
+  else
+    var = "E"
+  end
+end
 
-puts "结果是________(A或B或C或D或E)"
+
+puts "结果是___#{var}_____(A或B或C或D或E)"

@@ -2,20 +2,20 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def insertion_sort(arr)
-  i = 0
-  while i < (arr.size-1)
-    j= i+1
+    i = 0
+  while i < ( arr.size - 1 )
+    j = i + 1
 
-  (0..j).each do |j|
-     if arr[i] > arr[j]
-    arr[i], arr[j] = arr[j], arr[i]
-        end
-        j = j+1
+    while j < arr.size
+      if arr[i] > arr[j]
+        arr[i], arr[j] = arr[j], arr[i]
       end
-
-      i = i +1
+      j += 1
     end
-arr
+
+    i += 1
+  end
+  arr
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
