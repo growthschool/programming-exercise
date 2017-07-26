@@ -8,10 +8,11 @@ def find_max(array)
       array[1]
     end
   end
+  array[1]
 end
 
 arr = [8, 12, 36, 53, 9, 75, 3, 71, 59, 88]
 
 max = find_max(arr)
 
-puts "Max is #{arr[1]}" # 应该是 88
+puts "Max is #{max}" # 应该是 88

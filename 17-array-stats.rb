@@ -13,8 +13,12 @@ while (true)
 end
 
 puts arr.to_s
-
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+sum = 0
+for i in 0..arr.size
+  sum = sum + arr[i].to_f
+end
+arr.sort!
+puts "总和是 #{sum}"
+puts "平均是 #{(sum/arr.size).round(2)}"
+puts "最大值是 #{arr[-1]}"
+puts "最小值是 #{arr[0]}"
