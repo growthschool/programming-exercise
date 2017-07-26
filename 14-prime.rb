@@ -4,12 +4,12 @@ def is_prime(n)
   i = 2
   while i <= n.to_i/2
     if n.to_i % i == 0
-      i += n.to_i
+      break
     else
       i += 1
     end
   end
-  i < n.to_i
+  i == n.to_i/2 + 1
 end
 
 print "请输入数字 N，然后按 Enter: "
