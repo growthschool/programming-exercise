@@ -2,3 +2,5 @@ Buy book
 Go Shopping
 Walk
 Gogo
+Do Ruby Exercise
+
