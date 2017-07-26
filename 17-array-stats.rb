@@ -13,7 +13,9 @@ while (true)
 end
 
 puts arr.to_s
-
+array.each do |i|
+  
+end
 puts "总和是 _____"
 puts "平均是 _____"
 puts "最大值是 _____"
