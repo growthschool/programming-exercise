@@ -16,7 +16,7 @@ def filter_arr(arr)
       arr1.push(h)
     end
   end
-  arr1.sort_by{|i| i["age"]}.to_s
+  arr1.sort_by{|i| i["age"]}
 end
 puts "所有成年人，并由小到大:#{filter_arr(arr)}"
 
