@@ -27,7 +27,7 @@ while (true)
   elsif command == "remove"
     print "请输入要删除的编号: "
     #
-    i = gets.chomp.to_i
+    i = gets.chomp.to_iex
     todos.delete_at(i)
     show(todos)
   elsif command == "save"
