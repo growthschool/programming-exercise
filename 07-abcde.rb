@@ -17,6 +17,27 @@ y = gets
 print "请输入一个整数z，然后按 Enter: "
 z = gets
 
-# ....
+x= x.to_i
+y= y.to_i
+z= z.to_i
 
-puts "结果是________(A或B或C或D或E)"
+
+if x < 0
+  result = "A"
+else
+  if y > 0
+    if z > 0
+      result ="B"
+else
+    result = "C"
+end
+else # y< 0
+  if z > 0
+    result = "D"
+  else
+    result ="E"
+end
+end
+end
+
+puts "结果是____#{result}____(A或B或C或D或E)"

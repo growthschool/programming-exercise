@@ -12,7 +12,21 @@ y = gets
 print "请输入一个数字z，然后按 Enter: "
 z = gets
 
-# ....
+def find_max(x,y,z)
+  x = x.to_f
+
+  y = y.to_f
+
+  z = z.to_f
+
+  if x >= y && x >= z
+    a = x
+  elsif y >= x && y >= z
+    a = y
+  else z >= x && z >= y
+    a = z
+  end
+end
 
 answer = find_max(x,y,z)
 

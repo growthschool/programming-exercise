@@ -3,7 +3,7 @@
 i = 1
 while ( i <= 100 )
 
-  # ....
+puts i.to_i if i % 7 == 0
 
   i+=1
 end

@@ -9,9 +9,19 @@ weight = gets
 
 print "请输入您的身高(厘米)，然后按 Enter: "
 height = gets
+#用to_i 跟 to_f的差別 用to_i的話只取整數 to_f 會取浮點數
+bmi = weight.to_f / (height.to_f) **2
+bmi = bmi.round(1)
 
-# .....
+case bmi
+when 0..18.5
+  x = "過輕"
+when 18.5..24
+  x = "正常"
+else
+  x = "太肥惹"
+end
 
-puts "您的 BMI 是: _________"
+puts "您的 BMI 是: #{bmi}"
 
-puts "您的 BMI 结果是: _________(过轻或正常或过重)"
+puts "您的BMI結果是: #{x}"
