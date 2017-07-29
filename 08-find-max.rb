@@ -11,4 +11,12 @@ z = gets
 
 # ....
 
-puts "最大的数是 ________(x或y或z)"
+puts "最大的数是 :"
+
+    if (x > y) && (x > z)
+      puts "#{x}"
+    elsif (y > x) && (y > z)
+      puts "#{y}"
+    else
+      puts "#{z}"
+    end

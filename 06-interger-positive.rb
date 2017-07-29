@@ -6,5 +6,18 @@ x = gets
 
 # ....
 
-puts "这个数是_____ (正数或零或负数)"
-puts "这个数是_____ (偶数或奇数)"
+a = x.to_i
+
+puts "这个数是:"
+
+    if a > 0
+      puts "正数"
+    elsif a == 0
+      puts "零"
+    elsif
+      puts "负数"
+    elsif a % 2 == 0
+      puts "偶数"
+    else
+      puts "奇数"
+    end
