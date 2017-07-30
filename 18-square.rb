@@ -5,6 +5,13 @@ arr = []
 print "请输入数字 N，然后按 Enter: "
 n = gets
 
-# ...
+i = 0
+n = n.to_i
+while (i < n) do
+  arr[i] = i ** 2
+  i += 1
+end
+
+
 
 puts arr.to_s
