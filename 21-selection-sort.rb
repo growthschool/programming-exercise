@@ -2,7 +2,21 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def selection_sort(arr)
-  #...
+  (0..arr.length-1).each do |i|
+    min = arr[i]
+    index = i
+
+    (i+1..arr.length-1).each do |j|
+      if arr[j] < min
+        min = arr[j]
+        index = j
+      end
+    end
+
+    arr[i], arr[index] = arr[index], arr[i]
+  end
+
+  arr
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
