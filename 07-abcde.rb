@@ -17,20 +17,21 @@ y = gets
 print "请输入一个整数z，然后按 Enter: "
 z = gets
 
-x !=0 && y !=0 && z != 0
-if x.to_i < 0
+if x.to_i == 0 && y.to_i == 0 && z.to_i == 0
+   X = "Q___Q"
+elsif x.to_i < 0
   X = "A"
-else x.to_i > 0
+elsif x.to_i > 0
   if y.to_i > 0
     if z.to_i >0
       X = "B"
-    else z.to_i <0
+    elsif z.to_i <0
       X = "C"
     end
   else y.to_i < 0
     if z.to_i >0
       X = "D"
-    else z.to_i <0
+    elsif z.to_i <0
       X = "E"
     end
   end
