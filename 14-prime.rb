@@ -28,14 +28,14 @@ end
 
 #方法 2 高效改进版(while版)，无明显bug，推荐
 def is_prime(n)
-  if n > 1 && n <= 3
+  if n > 1 && n <= 3    # n <= 3 可以写成 n < 4
     return true
-  elsif n  > 3
+  elsif n  > 3    # n > 3 可以写成 n >= 4
     i = 2
     while i <= ((n ** 0.5))
       if (n <= 1 || n % i == 0)
-        return false
-        break
+        return false    #return false后就没 break什么事了，反之一样break会跳出这一层if循环
+        break       #break也可以不要
       end
       i+=1
     end
@@ -55,9 +55,9 @@ end
 
 #方法 3 高效改进版（for版），无明显bug，推荐
 def is_prime(n)
-  if n > 1 && n <= 3
+  if n > 1 && n < 4
     return true
-  elsif n  > 3
+  elsif n  >= 4
     i = 2
     for i in 2..(n ** 0.5)
       if (n <= 1 || n % i == 0)
