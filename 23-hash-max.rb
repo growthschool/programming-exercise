@@ -49,7 +49,7 @@ def find_max(hash)
       max = value
     end
   end
-  hash.key(max)   #找到对应max的那个key
+  hash.key(max)   #等遍历结束后，找到对应max的那个key
 end
 
 h = {             #给出哈希实例
