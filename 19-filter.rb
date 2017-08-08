@@ -33,3 +33,20 @@ end
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
 
 puts filter_even(arr).to_s # 应该是 [68, 42, 46, 46, 86]
+
+
+#方法 1 的衍生玩法
+def filter_even(arr)
+
+  arr_new = []
+  (0..99).each_with_index do |i|
+    if i % 2 == 0
+      arr_new << i unless arr.include?(i)
+    end
+  end
+  arr_new
+end
+
+arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
+
+puts filter_even(arr).to_s # 应该是 [68, 42, 46, 46, 86]
