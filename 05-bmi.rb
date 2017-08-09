@@ -5,13 +5,31 @@
 # 如果 BMI 介于 18.5 ~ 24，显示正常
 
 print "请输入您的体重(公斤)，然后按 Enter: "
-weight = gets
+weight = gets.to_f
 
 print "请输入您的身高(厘米)，然后按 Enter: "
-height = gets
+height = gets.to_f / 100    #厘米转化为米
 
+BMI = weight / (height * height)    #一定要有括号()
+
+puts "您的 BMI 是: #{ BMI }"
+
+if BMI < 18.5
+  puts "您的 BMI 结果是过轻"
+elsif BMI >= 24
+  puts "您的 BMI 结果是过重"
+else
+  puts "您的 BMI 结果是正常"
+end
+
+# 也可以是以下的代码
+puts "您的 BMI 是: #{ BMI }"
+
+if BMI < 18.5
+  puts "您的 BMI 结果是过轻"
+elsif BMI < 24
+  puts "您的 BMI 结果是正常"
+else
+  puts "您的 BMI 结果是过重"
+end
 # .....
-
-puts "您的 BMI 是: _________"
-
-puts "您的 BMI 结果是: _________(过轻或正常或过重)"
