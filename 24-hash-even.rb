@@ -2,7 +2,7 @@
 
 #方法 1
 def find_even_keys(hash)
-  result = []
+  result = []               #这个result取什么名字不重要，它所在的 def方法 被调用才重要
   hash.each do |key, value|
     if value % 2 == 0
       result << key
