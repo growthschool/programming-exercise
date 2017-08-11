@@ -2,17 +2,12 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def selection_sort(arr)
-  i = 0
-  while i < (arr.size - 1)
-    j = i + 1
-
-    while j < arr.size
-      if arr[i] > arr[j]
-        arr[i], arr[j] = arr[j], arr[i]
+  for i in 0...(arr.size - 1)
+    for j in (i+1)...arr.size
+      if arr[j] < arr[i]
+        arr[i],arr[j] = arr[j],arr[i]
       end
-      j += 1
     end
-    i += 1
   end
   arr
 end
