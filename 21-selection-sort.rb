@@ -2,7 +2,14 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def selection_sort(arr)
-  #...
+  for i in 0...(arr.size - 1)
+    for j in (i+1)...arr.size
+      if arr[j] < arr[i]
+        arr[i],arr[j] = arr[j],arr[i] #符合条件就交换位置
+      end
+    end
+  end
+  arr
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
