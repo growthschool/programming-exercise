@@ -1,7 +1,15 @@
 # 输入一个数字 N，请检查是不是质数
 
 def is_prime(n)
-# ....
+  x = 1
+  while x < n/2
+    x += 1
+    if n % x == 0
+       return false
+     else
+       return true
+    end
+  end
 end
 
 print "请输入数字 N，然后按 Enter: "
