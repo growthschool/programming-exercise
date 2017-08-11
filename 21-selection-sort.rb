@@ -5,7 +5,7 @@ def selection_sort(arr)
   for i in 0...(arr.size - 1)
     for j in (i+1)...arr.size
       if arr[j] < arr[i]
-        arr[i],arr[j] = arr[j],arr[i]
+        arr[i],arr[j] = arr[j],arr[i] #符合条件就交换位置
       end
     end
   end
