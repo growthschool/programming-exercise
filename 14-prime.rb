@@ -1,9 +1,10 @@
 # 输入一个数字 N，请检查是不是质数
 
 def is_prime(n)
-  x = 2
+  x = 1
   while x < n/2
-    if n % 2 == 0
+    x += 1
+    if n % x == 0
        return false
      else
        return true
