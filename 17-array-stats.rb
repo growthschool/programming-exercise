@@ -5,6 +5,7 @@ arr = []
 while (true)
   print "请输入数字，结束请直接按 Enter: "
   user_input = gets
+
   if user_input == "\n"
     break
   else
@@ -14,7 +15,36 @@ end
 
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+total = 0
+arr.each do |i|
+  total += i
+end
+
+
+
+average = total / arr.length
+
+
+
+max = arr[0]
+arr.each do |i|
+  if (max < i)
+    max = i
+  end
+end
+
+
+
+
+min = arr[0]
+arr.each do |i|
+  if (min > i)
+    min = i
+  end
+end
+
+
+puts "总和是 #{total}"
+puts "平均是 #{average}"
+puts "最大值是 #{max}"
+puts "最小值是 #{min}"
