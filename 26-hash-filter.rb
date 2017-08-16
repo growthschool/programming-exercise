@@ -9,8 +9,25 @@ arr = [
 ]
 
 # ....
+ages = []
 
-puts "所有成年人，并由小到大: _________"
+arr.each do |h|
+  if h["age"] > 18
+    ages.push(h["age"])
+  end
+end
+ages = ages.sort
+newarr = []
+
+ages.each do |h|
+  arr.each do |i|
+    if i["age"] == h
+      newarr.push(i)
+    end
+  end
+end
+
+puts "所有成年人，并由小到大: #{newarr}"
 
 # 答案应该是
 #[
