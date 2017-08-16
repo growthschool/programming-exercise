@@ -10,5 +10,12 @@ print "请输入一个数字z，然后按 Enter: "
 z = gets
 
 # ....
+if x.to_f >= y.to_f && x.to_f >= z.to_f
+  result = x
+elsif y.to_f >= x.to_f && y.to_f >= z.to_f
+  result = y
+else
+  result = z
+end
 
-puts "最大的数是 ________(x或y或z)"
+puts "最大的数是 #{result}"
