@@ -9,13 +9,9 @@ i = 0
 while n > i
   squ =  i*i
   arr << squ
-  
+
   i = i + 1
 end
-
-
-
-
 
 # ...
 
