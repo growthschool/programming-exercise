@@ -5,4 +5,4 @@ your_name = gets
 
 # ...
 
-puts "Hello,johsnow"
+puts "Hello," + "#{your_name}"
