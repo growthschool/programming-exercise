@@ -17,6 +17,22 @@ y = gets
 print "请输入一个整数z，然后按 Enter: "
 z = gets
 
-# ....
+if x.to_f < 0
+  a = "A"
+elsif x.to_f > 0
+  if y.to_f > 0
+    if z.to_f > 0
+      a = "B"
+    elsif z.to_f < 0
+      a = "C"
+    end
+  elsif y.to_f < 0
+    if z.to_f > 0
+      a = "D"
+    elsif z.to_f < 0
+      a = "E"
+    end
+  end
+end
 
-puts "结果是________(A或B或C或D或E)"
+puts "结果是___#{a}_____(A或B或C或D或E)"
