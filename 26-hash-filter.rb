@@ -8,9 +8,16 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
-
-puts "所有成年人，并由小到大: _________"
+def filter(arr)
+  result_arr = []
+  arr.each do |h|
+    if h["age"] >= 18
+      result_arr.push(h)
+    end
+  end
+  result_arr.sort_by {|i| i["age"]}
+end
+puts "所有成年人，并由小到大: ____#{filter(arr)}_____"
 
 # 答案应该是
 #[

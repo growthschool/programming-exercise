@@ -3,8 +3,11 @@
 arr = []
 
 print "请输入数字 N，然后按 Enter: "
-n = gets
-
-# ...
+n = gets.to_i
+a = 0
+while a < n
+  arr << a*a
+  a += 1
+end
 
 puts arr.to_s
