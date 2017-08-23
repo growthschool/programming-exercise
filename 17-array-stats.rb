@@ -12,6 +12,15 @@ while (true)
   end
 end
 
+def sum(array)
+  sum = 0
+  array.each do |arr|
+    sum = sum + arr
+  end
+  return sum
+end
+
+
 puts arr.to_s
 
 puts "总和是 _____"

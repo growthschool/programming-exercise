@@ -3,7 +3,15 @@
 arr = []
 
 print "请输入数字 N，然后按 Enter: "
-n = gets
+n = gets.to_i
+
+i = 0
+while n > i
+  squ =  i*i
+  arr << squ
+
+  i = i + 1
+end
 
 # ...
 
