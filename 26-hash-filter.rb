@@ -10,7 +10,18 @@ arr = [
 
 # ....
 
-puts "所有成年人，并由小到大: _________"
+def  c(arr)
+  acc = []
+  arr.each do |i|
+    if i["age"] >= 18
+      acc << i
+    end
+  end
+  acc.sort_by!{|i| i["age"]} #sort for array by value
+  return acc
+end
+
+puts "所有成年人，并由小到大: ___#{c(arr)}______"
 
 # 答案应该是
 #[
