@@ -2,6 +2,13 @@
 
 def filter_even(arr)
   #...
+  new_arr = []
+  for i in arr
+    if i % 2 == 0
+      new_arr << i
+    end
+  end
+  new_arr
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]

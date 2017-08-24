@@ -2,6 +2,15 @@
 
 def find_max(array)
   #....
+  max = array[0]
+  i = 1
+  while (i < array.length)
+    if array[i] > max
+      max = array[i]
+    end
+    i += 1
+  end
+  max
 end
 
 arr = [8, 12, 36, 53, 9, 75, 3, 71, 59, 88]

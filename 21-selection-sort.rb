@@ -3,6 +3,21 @@
 
 def insertion_sort(arr)
   #...
+  min_index = 0
+  i = 0
+  while i < arr.size
+    j = i + 1
+    while j < arr.size
+      if arr[j] < arr[min_index]
+        puts "#{arr[j]} < #{arr[min_index]}"
+        min_index = j
+      end
+      j += 1
+    end
+    arr[i], arr[min_index] = arr[min_index], arr[i]
+    i += 1
+  end
+  arr
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]

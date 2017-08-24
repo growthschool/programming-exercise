@@ -2,9 +2,9 @@
 
 
 print "请输入一个整数，然后按 Enter: "
-x = gets
+x = gets.to_i
 
 # ....
 
-puts "这个数是_____ (正数或零或负数)"
-puts "这个数是_____ (偶数或奇数)"
+puts "这个数是#{if x > 0 then '正数' elsif x == 0 then '零' else '负数' end}"
+puts "这个数是#{ x % 2 == 1 ? '奇数' : '偶数' }"
