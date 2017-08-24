@@ -2,6 +2,13 @@
 
 def find_max(hash)
   # ...
+  max_key = 'a'
+  hash.each do |key, value|
+    if hash[key] > hash[max_key]
+      max_key = key
+    end
+  end
+  max_key
 end
 
 h = {

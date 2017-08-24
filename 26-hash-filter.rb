@@ -9,8 +9,16 @@ arr = [
 ]
 
 # ....
+arr.each do |item|
+  if item['age'] < 18
+    arr.delete(item)
+  end
+end
 
-puts "所有成年人，并由小到大: _________"
+arr.sort_by!{ |item| item['age'] }
+
+
+puts "所有成年人，并由小到大: #{arr}"
 
 # 答案应该是
 #[

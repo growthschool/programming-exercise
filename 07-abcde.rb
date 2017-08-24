@@ -9,14 +9,33 @@
 #     当 z < 0 输出 "E"
 
 print "请输入一个整数x，然后按 Enter: "
-x = gets
+$x = gets.to_i
 
 print "请输入一个整数y，然后按 Enter: "
-y = gets
+$y = gets.to_i
 
 print "请输入一个整数z，然后按 Enter: "
-z = gets
+$z = gets.to_i
 
 # ....
+def number2char
+  if $x < 0
+    'A'
+  else
+    if $y > 0
+      if $z > 0
+        'B'
+      else
+        'C'
+      end
+    else
+      if $z > 0
+        'D'
+      else
+        'E'
+      end
+    end
+  end
+end
 
-puts "结果是________(A或B或C或D或E)"
+puts "结果是#{number2char}"
