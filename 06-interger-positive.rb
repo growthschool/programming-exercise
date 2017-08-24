@@ -12,7 +12,7 @@ else
   conclusion = "负数"
 end
 
-if x.to_i & 2 == 0
+if x.to_i % 2 == 0
   conclusion2 = "偶数"
 else
   conclusion2 = "奇数"
