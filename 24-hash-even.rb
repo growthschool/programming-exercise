@@ -3,14 +3,14 @@
 def find_even_keys(h)
    value = h.values
    a = []
-   for i in value
+   value.each do |i|
      if i % 2 == 0
        a << i
      end
    end
 
    b = []
-   for j in a
+   a.each do |j|
      c = h.key(j)
      b << c
    end
