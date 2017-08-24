@@ -14,7 +14,20 @@ end
 
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+def total(array)
+  t = 0
+  array.each do |i|
+    t += i
+  end
+  return t
+end
+
+def average(array)
+  a = total(array)
+  a / array.size
+end
+
+puts "总和是 #{total(arr)}"
+puts "平均是 __#{average(arr)}___"
+puts "最大值是 __#{arr.max}___"
+puts "最小值是 ___#{arr.min}__"
