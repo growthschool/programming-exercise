@@ -2,6 +2,28 @@
 
 def is_prime(n)
 # ....
+res = [1]
+  res<<n
+
+  if n == 0 || n == 1
+    return false
+  end
+
+  for i in 2..10
+    if n == i
+      next
+    end
+
+    if n % i == 0
+      res<<i
+    end
+  end
+
+  if res.length > 2
+    return false
+  else
+    return true
+  end
 end
 
 print "请输入数字 N，然后按 Enter: "
