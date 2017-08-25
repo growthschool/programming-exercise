@@ -2,11 +2,17 @@
 
 def count(arr)
   h = {}
-
   arr.each do |i|
-    # ...
+      j = 0
+      n = 0
+      while (j < arr.size )
+          if i == arr[j]
+              n += 1
+          end
+          j += 1
+      end
+      h["#{i}"] = n
   end
-
   return h # 回传一个 hash
 end
 
@@ -15,4 +21,3 @@ arr =  ["a", "d", "d", "c", "b", "c", "c", "c", "d", "d", "e", "e", "e", "d", "a
 answer = count(arr)
 
 puts answer # 答案应该是 {"a"=>3, "d"=>6, "c"=>5, "b"=>1, "e"=>5}
-
