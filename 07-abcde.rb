@@ -18,5 +18,20 @@ print "请输入一个整数z，然后按 Enter: "
 z = gets
 
 # ....
+x = x.to_i
+y = y.to_i
+z = z.to_i
 
-puts "结果是________(A或B或C或D或E)"
+if x < 0
+  print result = "A"
+elsif (x > 0) && (y > 0) && (z > 0)
+  print result = "B"
+elsif (x > 0) && (y > 0) && (z < 0)
+  print result = "C"
+elsif (x > 0) && (y < 0) && (z > 0)
+  print result = "D"
+elsif (x > 0) && (y < 0) && (z < 0)
+  print result = "E"
+end
+
+puts  "是结果！"
