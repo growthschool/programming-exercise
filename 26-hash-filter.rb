@@ -10,7 +10,18 @@ arr = [
 
 # ....
 
-puts "所有成年人，并由小到大: _________"
+a = []
+ for i in arr              #这里i就是arr中的值，也就是一个个hash.
+    if i["age"] >= 18
+      a<<i
+    end
+ end
+
+
+ result = []
+ result = a.sort_by{ |i| i["age"]}
+
+ puts "所有成年人，并由小到大: #{result}"
 
 # 答案应该是
 #[
