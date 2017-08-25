@@ -6,12 +6,24 @@
 
 print "请输入您的体重(公斤)，然后按 Enter: "
 weight = gets
+weight = weight.to_f
 
 print "请输入您的身高(厘米)，然后按 Enter: "
 height = gets
+height = height.to_f
 
 # .....
 
-puts "您的 BMI 是: _________"
+bmi = weight*10000/(height*height)
 
-puts "您的 BMI 结果是: _________(过轻或正常或过重)"
+if bmi >= 24
+  a = "过重"
+elsif bmi < 18.5
+  a = "过轻"
+elsif
+  a = "正常"
+end
+
+puts "您的 BMI 是: ____#{bmi}_____"
+
+puts "您的 BMI 结果是: ____#{a}_____"
