@@ -8,4 +8,15 @@ n = gets
 #
 #   end
 # end
-
+i = 0
+j = 0
+n = n.to_i
+while (i <= n )
+  while (j <= n)
+    result = i * j
+    puts "#{i} x #{j} = #{result}"
+    j+=1
+  end
+  i+=1
+  j = 0
+end
