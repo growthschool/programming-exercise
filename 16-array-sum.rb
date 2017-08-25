@@ -1,7 +1,13 @@
 # 给定一阵列内含数字，输出最大值
 
 def find_max(array)
-  #....
+  j = array[0]
+  array.each do |i|
+      if j < i
+          j = i
+      end
+  end
+  return j
 end
 
 arr = [8, 12, 36, 53, 9, 75, 3, 71, 59, 88]

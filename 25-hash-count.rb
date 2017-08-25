@@ -1,13 +1,19 @@
 # 计算一个阵列中各个元素的出现频率
 
 def count(arr)
-  h = {}
-
-  arr.each do |i|
-    # ...
-  end
-
-  return h # 回传一个 hash
+    h = {}
+    arr.each do |i|
+        j = 0
+        n = 0
+        while (j < arr.size )
+            if i == arr[j]
+                n += 1
+            end
+            j += 1
+        end
+        h["#{i}"] = n
+    end
+    return h # 回传一个 hash
 end
 
 arr =  ["a", "d", "d", "c", "b", "c", "c", "c", "d", "d", "e", "e", "e", "d", "a", "c", "e", "a", "d", "e"]
