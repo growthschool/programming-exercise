@@ -8,9 +8,29 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
+result = []
 
-puts "所有成年人，并由小到大: _________"
+age = []
+arr.each do |i|
+  age << i["age"]  #将年龄放入age中
+end
+
+adult = []
+age.each do |j|
+  if j > 18
+    adult << j  #将成人放入adult中
+  end
+end
+
+arr.each do |k|
+  if adult.include?(k["age"])
+    result << k  #key => value
+  end
+end
+
+result = result.sort_by{ |i| i["age"] }
+
+puts "所有成年人，并由小到大: #{result}"
 
 # 答案应该是
 #[
