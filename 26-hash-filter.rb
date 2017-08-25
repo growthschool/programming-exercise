@@ -16,15 +16,15 @@ arr.each do |i|
 end
 
 adult = []
-age.each do |i|
-  if i > 18
-    adult << i  #将成人放入adult中
+age.each do |j|
+  if j > 18
+    adult << j  #将成人放入adult中
   end
 end
 
-arr.each do |i|
-  if adult.include?(i["age"])
-    result << i  #将
+arr.each do |k|
+  if adult.include?(k["age"])
+    result << k  #key => value
   end
 end
 
