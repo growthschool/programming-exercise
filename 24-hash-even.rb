@@ -1,8 +1,13 @@
 # 给定一 Hash，输出 value 是偶数的 keys
 
 def find_even_keys(hash)
-
-  # ... (请回传一个数组)
+    arr = []
+    hash.each do |key, value|
+        if value % 2 == 0
+            arr << key
+        end
+    end
+  return arr
 
 end
 

@@ -2,4 +2,16 @@
 
 doc = File.read("wordcount.txt")
 
+docs = doc.split("")
+h = {}
+for i in docs
+    if h[i]
+        h[i] += 1
+    else
+        h[i] =1
+    end
+end
+puts h
+    
+
 # ...

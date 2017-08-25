@@ -7,7 +7,13 @@ while (true)
   n = gets
 
   #puts "太低了，再猜一次"
+  if n.to_i < target
+      puts "太低了，再猜一次"
+  end
   #puts "太高了，再猜一次"
+  if n.to_i > target
+      puts "太高了，再猜一次"
+  end
 
   if n.to_i == target
     puts "恭喜猜中啦! "
