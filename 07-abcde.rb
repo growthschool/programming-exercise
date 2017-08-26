@@ -17,7 +17,7 @@ y = gets.to_i
 print "请输入一个整数z，然后按 Enter: "
 z = gets.to_i
 
-if x.to_i < 0
+if x < 0
   puts "结果是A"
 elsif x > 0 && y > 0 && z > 0
   puts "结果是B"

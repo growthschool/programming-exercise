@@ -13,10 +13,59 @@ while (true)
 end
 
 puts arr.to_s
-array.each do |i|
-  
+puts arr.size
+def find_max(arr)
+  m = arr[0]
+  arr.each do |i|
+
+    if  i > m
+     m = i
+     end
+
+  end
+  return m
 end
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+max = find_max(arr)
+puts "最大值是 #{max}"
+
+def find_min(arr)
+  n = arr[0]
+  arr.each do |i|
+
+    if  i < n
+     n = i
+     end
+
+  end
+  return n
+end
+min = find_min(arr)
+puts "最小值是 #{min}"
+
+def find_sum(arr)
+  s = 0
+  arr.each do |i|
+
+
+     s = i + s
+
+
+  end
+  return s
+end
+sum = find_sum(arr)
+puts "总和是 #{sum}"
+
+def find_average(arr)
+  a = 0
+  arr.each do |i|
+
+
+     a = i + a
+
+
+  end
+  return a/arr.size
+end
+average = find_average(arr)
+puts " 平均数是#{average}"

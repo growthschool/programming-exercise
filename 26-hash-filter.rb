@@ -8,9 +8,13 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
+def process(arr)
+  arr.sort_by{ |i| i["age"]}.select{ |a| a["age"] >= 18 }
+end
 
-puts "所有成年人，并由小到大: _________"
+ answer = process(arr)
+
+puts "所有成年人，并由小到大: #{answer}"
 
 # 答案应该是
 #[
