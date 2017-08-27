@@ -3,6 +3,22 @@
 
 def selection_sort(arr)
   #...
+
+  k = 0
+  array = []
+  x = 0
+  while x < arr.size
+    a = arr[0]
+    arr.each_with_index do |i, j|
+      if i <= a
+          a = i
+          k = j
+      end
+    end
+    array << a
+    arr.delete_at(k)
+  end
+    return array
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
