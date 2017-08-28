@@ -7,7 +7,7 @@ print "请输入有多少人要吃，然后按 Enter: "
 people = gets
 
 a = pizzas.to_i/people.to_i
-b = pizzas.to_f % people.to_i
+b = pizzas.to_i % people.to_i
 # .....
 
 puts "每人可分得几片: ____#{a}_____ 片"
