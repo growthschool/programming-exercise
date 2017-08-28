@@ -1,6 +1,17 @@
 # 输入一个数字 N，请检查是不是质数
 
 def is_prime(n)
+  i = 2
+  if n < 2
+    return false
+  end
+  while (i < n)
+    if n % i == 0
+      return false
+    end
+    i += 1
+  end
+  return true
 # ....
 end
 
