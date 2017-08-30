@@ -11,10 +11,15 @@ while (true)
     arr << user_input.to_i
   end
 end
+total = 0
+arr.each{|a| total += a}
+ave = total.to_f/arr.length
+max = arr.max
+min = arr.min
 
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+puts "总和是 __#{total}___"
+puts "平均是 ___#{ave}__"
+puts "最大值是 ___#{max}__"
+puts "最小值是 ___#{min}__"
