@@ -16,18 +16,27 @@ while (true)
   command = gets.chomp
 
   if command == "add"
-    print "请输入代办事项: "
-    # ...
-  elsif command == "remove"
-    print "请输入要删除的编号: "
-    # ...
-  elsif command == "save"
-    puts "存盘离开"
+     print "请输入代办事项: "
+     # ...
+     newTodo = gets.chomp
+     todos.push(newTodo)
+   elsif command == "remove"
+     print "请输入要删除的编号: "
+     # ...
+     index = gets.chomp.to_i
+     todos.pop(index)
+   elsif command == "save"
+     puts "存盘离开"
 
-    # ...
-    break;
-  else
-    puts "看不懂，请再输入一次"
-  end
-end
-
+     File.open("todos.txt", "w ") do |f|
+       todos.each do |line|
+          f << line
+          f << "\n"
+       end
+     end
+     # ...
+     break;
+   else
+     puts "看不懂，请再输入一次"
+   end
+ end
