@@ -12,5 +12,5 @@ doc = File.read("wordcount.txt")
       h[word] = 1
     end
   end
-
+ 
   puts h
