@@ -3,3 +3,14 @@
 doc = File.read("wordcount.txt")
 
 # ...
+ doc = doc.split(" ")
+  h = {}
+  doc.each do |word|
+    if h[word]
+      h[word]  += 1
+    else
+      h[word] = 1
+    end
+  end
+
+  puts h
