@@ -3,8 +3,17 @@
 arr = []
 
 print "请输入数字 N，然后按 Enter: "
-n = gets
+n = gets.to_i
 
 # ...
+# i = 0
+# while i < n
+#   arr << i * i
+#   i += 1
+# end
+
+(0..n).each_with_index do |i, j|
+  arr << j ** 2
+end
 
 puts arr.to_s
