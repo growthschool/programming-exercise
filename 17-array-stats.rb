@@ -12,9 +12,28 @@ while (true)
   end
 end
 
-puts arr.to_s
+max = arr[0]
+min = arr[0]
+sum = 0
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+arr.each do |i|
+    if max < i
+      max = i
+    end
+
+    if min > i
+      min = i
+    end
+
+    sum = sum + i
+end
+
+
+
+
+
+puts arr.to_s
+puts "总和是 #{sum}"
+puts "平均是 #{sum/arr.size}"
+puts "最大值是 #{max}"
+puts "最小值是#{min}"
