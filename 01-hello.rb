@@ -5,4 +5,4 @@ zhoujin = gets
 
 # ...
 
-puts "hello,zhoujin"
+puts "hello,#{zhoujin}"
