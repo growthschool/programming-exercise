@@ -11,4 +11,21 @@ z = gets
 
 # ....
 
-puts "最大的数是 ________(x或y或z)"
+x = x.to_f
+y = y.to_f
+z = z.to_f
+
+# if x > y && x > z
+#   h = "x"
+# elsif y > x && y > z
+#   h = "y"
+# elsif z > x && z > y
+#   h = "z"
+# else
+#   puts "无法求解"
+#
+# end
+
+h = [x, y, z].max.to_i
+
+puts "最大的数是: #{h}"

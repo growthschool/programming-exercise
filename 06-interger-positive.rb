@@ -5,6 +5,24 @@ print "请输入一个整数，然后按 Enter: "
 x = gets
 
 # ....
+a = x.to_i
 
-puts "这个数是_____ (正数或零或负数)"
-puts "这个数是_____ (偶数或奇数)"
+if a > 0
+  b = "正数"
+elsif a == 0
+  b = "零"
+else b = "负数"
+
+end
+if a > 0
+
+if a % 2 == 0
+  c = "偶数"
+else
+  c = "奇数"
+end
+
+end
+
+puts "这个数是: #{b}"
+puts "这个数是: #{c}"

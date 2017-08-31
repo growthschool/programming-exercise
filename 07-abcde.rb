@@ -11,6 +11,7 @@
 print "请输入一个整数x，然后按 Enter: "
 x = gets
 
+
 print "请输入一个整数y，然后按 Enter: "
 y = gets
 
@@ -19,4 +20,23 @@ z = gets
 
 # ....
 
-puts "结果是________(A或B或C或D或E)"
+a = x.to_f
+b = y.to_f
+c = z.to_f
+
+if a < 0
+  h = "A"
+elsif a > 0 && b > 0 && c > 0
+  h = "B"
+  elsif a > 0 && b > 0 && c < 0
+    h = "C"
+  elsif a > 0 && b < 0 && c > 0
+    h = "D"
+  elsif a > 0 && b < 0 && c < 0
+    h = "E"
+end
+
+
+
+
+puts "结果是:#{h}"

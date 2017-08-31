@@ -10,7 +10,23 @@ arr = [
 
 # ....
 
-puts "所有成年人，并由小到大: _________"
+
+# def filter_array(arr)
+#   result_arr = []
+#   arr.each do |h|
+#     if h["age"] >= 18
+#       result_arr.push(h)
+#     end
+#   end
+#   result_arr.sort_by { |i| i["age"]}
+# end
+
+def filter_array(arr)
+  arr.sort_by { |i| i["age"]}.select { |a| a["age"] >= 18}
+end
+
+
+puts "所有成年人，并由小到大: #{filter_array(arr)}"
 
 # 答案应该是
 #[

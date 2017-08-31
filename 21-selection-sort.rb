@@ -3,7 +3,34 @@
 
 def selection_sort(arr)
   #...
+
+#   i = 0
+#   j = 1
+#   s = arr.size.to_i
+#   while i <= s - 1
+#     min = arr[i]
+#     while j <= s - 1
+#       if min > arr[j]
+#         arr[i] = arr[j]
+#         arr[j] = min
+#         min = arr[i]
+#       end
+#       j += 1
+#     end
+#     i += 1
+#     j = i + 1
+#   end
+#   arr
+# end
+
+  (0...arr.size).each do |i|
+    min, index = arr[i], i
+    (i...arr.size).each { |j| min, index = arr[j], j if arr[j] < min }
+    arr[i], arr[index] = arr[index], arr[i]
+  end
+  arr
 end
+
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
 
