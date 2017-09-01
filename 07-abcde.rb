@@ -22,4 +22,17 @@ z = gets.to_i
 if x > 0
   if y > 0
     if z > 0
-      puts ""
+      puts "结果是B"
+    elsif z < 0
+      puts "结果是C"
+    end
+  elsif y < 0
+     if z > 0
+       puts "结果是D"
+     elsif z < 0
+       puts "结果是E"
+     end
+   end
+elsif x < 0
+      puts "结果是A"
+end
