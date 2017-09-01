@@ -11,13 +11,13 @@ def find_max(x, y, z)
 end
 
 print "请输入一个数字x，然后按 Enter: "
-x = gets
+x = gets.to_f
 
 print "请输入一个数字y，然后按 Enter: "
-y = gets
+y = gets.to_f
 
 print "请输入一个数字z，然后按 Enter: "
-z = gets
+z = gets.to_f
 
 # ....
 
