@@ -5,13 +5,25 @@
 # 如果 BMI 介于 18.5 ~ 24，显示正常
 
 print "请输入您的体重(公斤)，然后按 Enter: "
-weight = gets
+weight = gets.to_f
 
 print "请输入您的身高(厘米)，然后按 Enter: "
-height = gets
+height = gets.to_f / 100
 
 # .....
 
-puts "您的 BMI 是: _________"
+bmi = (weight / (height * height))
+bmis = bmi.to_s
+bmi_rounddown = bmis[0, bmis.index('.')+2+1].to_f
 
-puts "您的 BMI 结果是: _________(过轻或正常或过重)"
+if bmi < 18.5
+  result = "过轻"
+elsif bmi >= 24
+  result = "过重"
+else
+  result = "正常"
+end
+
+puts "您的 BMI 是: #{bmi_rounddown}"
+
+puts "您的 BMI 结果是: #{result}"
