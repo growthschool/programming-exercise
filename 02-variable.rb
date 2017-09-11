@@ -11,3 +11,9 @@ puts "b 是 #{b}"
 puts "a 应该是 2，现在是 #{a}"
 puts "b 应该是 1，现在是 #{b}"
 
+c = a
+a = b
+b = c
+
+puts "a 现在是 #{a}"
+puts "b 现在是 #{b}"
