@@ -1,20 +1,14 @@
 # 给定一 Hash，输出有最大 value 的 key
 
 def find_max(hash)
-  value = hash.values
-  size = value.size
-
-  j = 1
-  max = value[0]
-  while j < size
-    if max < value[j]
-      max = value[j]
+  value_list = hash.values
+  max = value_list[0]
+  value_list.each do |value|
+    if value > max
+      max = value
     end
-    j += 1
   end
-  # puts max
-
-  hash.key(max)
+  return hash.key(max)
 end
 
 h = {
@@ -28,3 +22,5 @@ h = {
 answer = find_max(h)
 
 puts "有最大 value 的是 #{answer}" # 应该是 d
+
+

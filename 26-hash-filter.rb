@@ -8,29 +8,24 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-result = []
+adult_age_list = []
 
-a = []
-for i in arr
-  a << i["age"]
-end
-
-b = []
-for j in a
-  if j > 18
-    b << j
+arr.each do |h|
+  if h["age"] > 18
+    adult_age_list << h["age"]
   end
 end
 
-for k in arr
-  if b.include?(k["age"])
-    result << k
+adult_age_hash_list = []
+arr = arr.sort_by{ |i| i["age"]}
+
+arr.each do |j|
+  if adult_age_list.include?(j["age"])
+    adult_age_hash_list << j
   end
 end
 
-result  = result.sort_by{ |i| i["age"] }
-
-puts "所有成年人，并由小到大: #{result}"
+puts "所有成年人，并由小到大: #{adult_age_hash_list.to_s}"
 
 # 答案应该是
 #[

@@ -13,17 +13,16 @@ x = x.to_i
 y = y.to_i
 z = z.to_i
 
-if x > y
-  if x > z
-    max = x
-  else
-    max = z
+max = "x"
+
+if y > x
+  max = "y"
+  if z > y
+    max = "z"
   end
 else
-  if y > z
-    max = y
-  else
-    max = z
+  if z > x
+    max = "z"
   end
 end
 

@@ -7,9 +7,8 @@ puts "a 是 #{a}"
 puts "b 是 #{b}"
 
 c = a
-d = b
+a = b
 b = c
-a = d
 
 puts "a 应该是 2，现在是 #{a}"
 puts "b 应该是 1，现在是 #{b}"
