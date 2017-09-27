@@ -12,4 +12,12 @@ b = gets
 
 answer = calculate_area(a,b)
 
-puts "直角三角形的面积是: #{answer}"
+puts "直角三角形的面积是:
+#{
+def calculate_area(a,b)
+  "#{(b.to_f * a.to_f) / 2} "
+end
+answer = calculate_area(a,b)
+puts "#{answer}"
+}
+"
