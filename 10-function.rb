@@ -16,4 +16,19 @@ z = gets
 
 answer = find_max(x,y,z)
 
-puts "最大的数是 #{answer}"
+puts "最大的数是
+#{
+def find_max(x, y, z)
+  if x.to_f > y.to_f && x.to_f > z.to_f
+    "#{x}"
+  elsif y.to_f > x.to_f && y.to_f > z.to_f
+    "#{y}"
+  else
+    "#{z}"
+  end
+end
+answer = find_max(x,y,z)
+puts "#{answer}"
+
+}
+"
