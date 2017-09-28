@@ -1,13 +1,10 @@
 # 题目: 求 1~100 所有偶数的和
 
-i = 1
+i = 2
 total = 0
 
-while ( i <= 100 )
+while (  i <= 100 )
+  puts i
+  i = i + 2
 
-  # ....
-
-  i+=1
 end
-
-puts total
