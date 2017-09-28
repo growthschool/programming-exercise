@@ -18,3 +18,7 @@ puts "总和是 _____"
 puts "平均是 _____"
 puts "最大值是 _____"
 puts "最小值是 _____"
+
+arr.each do  |n|
+  puts 
+end
