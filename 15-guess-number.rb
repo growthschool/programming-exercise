@@ -18,5 +18,4 @@ while (true)
     puts "恭喜猜中啦! "
     break
   end
-
 end
