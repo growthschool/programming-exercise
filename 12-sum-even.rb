@@ -4,7 +4,8 @@ i = 2
 total = 0
 
 while (  i <= 100 )
-  puts i
-  i = i + 2
-
+   total += i
+   i += 2
 end
+
+puts total
