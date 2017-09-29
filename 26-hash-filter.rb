@@ -7,7 +7,7 @@ arr = [
   { "name" => "Steven", "age" => 22 },
   { "name" => "Vincent", "age" => 6 },
 ]
-   arr.each do  |i|
+   arr.each do  |i|   # 多想一会就会有答案了
      if i["age"] > 18
        puts i
      end
