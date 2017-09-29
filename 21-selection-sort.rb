@@ -7,6 +7,6 @@ end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
 
-answer = selection_sort(arr)
+answer = arr.sort
 
 puts answer.to_s # 应该是 [1, 7, 9, 42, 46, 46, 68, 77, 86, 91]
