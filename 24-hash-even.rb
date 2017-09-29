@@ -2,7 +2,7 @@
 
 def find_even_keys(hash)
   result = []
-  hash.each do  |key, value|   #
+  hash.each do  |key, value|
     if  value % 2 == 0
        result << key
     end
