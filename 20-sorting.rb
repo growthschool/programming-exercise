@@ -6,6 +6,13 @@ def filter_even(arr)
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
+a = []
+arr.each do |i|
+  if i % 2 == 0
+     a.push(i).to_s
+  end
+end
 
+puts a.sort.uniq
 
-puts "________" # 应该是 [42, 46, 68, 86]
+# puts "________" # 应该是 [42, 46, 68, 86]
