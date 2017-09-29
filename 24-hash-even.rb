@@ -7,7 +7,7 @@ def find_even_keys(hash)
        result << key
     end
   end
-  result
+  result   # 输出结果应该为[a,b,c]，搞了半天还是输出["a","b","c"]，先做下面的，明天再回来弄
 end
 
 h = {
