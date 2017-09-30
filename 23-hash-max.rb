@@ -1,7 +1,11 @@
 # 给定一 Hash，输出有最大 value 的 key
 
 def find_max(hash)
-  # ...
+  hash.each do |key, value|
+    if value == hash.values.max     #当时在做的的时候，只写了value.max 导致报错
+      return key
+    end
+  end
 end
 
 h = {
@@ -15,5 +19,3 @@ h = {
 answer = find_max(h)
 
 puts "有最大 value 的是 #{answer}" # 应该是 d
-
-

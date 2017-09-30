@@ -14,7 +14,23 @@ end
 
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+    puts "总和是
+      #{
+        arr.inject(:+)
+      }
+    "
+    puts "平均是
+      #{
+      arr.inject(:+)/arr.size
+       }
+    "
+    puts "最大值是
+      #{
+      arr.sort[-1]
+      }
+    "
+    puts "最小值是
+      #{
+      arr.sort[0]
+      }
+    "
