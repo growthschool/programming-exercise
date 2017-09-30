@@ -1,21 +1,23 @@
 # 给定一阵列内含数字，输出另一个数组只包含偶数
 
 
-#
-# def filter_even(arr)
-#
-# end
+
+def filter_even(arr)
+  arr_even = []
+  arr.each do |i|
+    if i % 2 == 0
+      arr_even << i
+    end
+  end
+  return arr_even
+end
 
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
-a = []
 
-arr.each do |i|
-  if i % 2 == 0
-    puts  i      # 这部分不知道怎么输出数组了？
-  end
-end
+
+
 
 # puts arr.push(x).to_s
 
-# puts filter_even(arr).to_s # 应该是 [68, 42, 46, 46, 86]
+puts filter_even(arr).to_s # 应该是 [68, 42, 46, 46, 86]
