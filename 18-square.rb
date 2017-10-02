@@ -4,7 +4,16 @@ arr = []
 
 print "请输入数字 N，然后按 Enter: "
 n = gets
+n = n.to_i
+while (true)
+  if n >=0
+    arr << (n * n)
+    n -= 1
+  else
+    break
+  end
+end
 
-# ...
+arr = arr.reverse!
 
 puts arr.to_s
