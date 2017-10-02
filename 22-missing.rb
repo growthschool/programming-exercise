@@ -2,6 +2,14 @@
 
 def find_missing(arr)
   # ...
+  # arr1 = [0,1,2,3,4,5,6,7,8,9]
+  # arr2 = arr1 - arr
+  # return arr2
+  sum = []
+  for i in 0..9
+    sum.push(i)
+  end
+  return sum - arr
 end
 
 answer = find_missing( [2,2,1,5,8,4] )
