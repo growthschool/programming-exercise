@@ -2,10 +2,26 @@
 
 def is_prime(n)
 # ....
+  if n < 2
+    return false
+  elsif n == 2
+    return true
+  else
+    for i in 2..(n-1)
+      if n % i ==0
+        return false
+      else
+        return true
+      end
+    end
+  end
 end
 
-print "请输入数字 N，然后按 Enter: "
-n = gets
+n = 0
+while n <= 1
+  print "请输入大于1的数字 N，然后按 Enter: "
+  n = gets.to_i
+end
 
 if is_prime(n.to_i)
   puts "这是质数"

@@ -7,4 +7,8 @@ n = gets
 
 # ...
 
+for i in 0..(n.to_i-1)
+  arr << i**2
+end
+
 puts arr.to_s
