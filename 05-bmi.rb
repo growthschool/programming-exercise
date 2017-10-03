@@ -17,8 +17,10 @@ puts "您的 BMI 是: #{ BMI }"
 
 if BMI < 18.5
   puts "您的 BMI 结果是: 过轻"
-elsif BMI >24
+elsif BMI > 24
   puts "您的 BMI 结果是: 过重"
 else
   puts "您的 BMI 结果是: 正常"
 end
+
+#bug :输入任意非数字串

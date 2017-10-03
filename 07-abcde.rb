@@ -17,6 +17,28 @@ y = gets
 print "请输入一个整数z，然后按 Enter: "
 z = gets
 
-# ....
+q = x.to_f
+w = y.to_f
+e = z.to_f
 
-puts "结果是________(A或B或C或D或E)"
+if q < 0
+  puts "A"
+elsif q > 0 && w > 0
+  if e > 0
+    puts "B"
+  elsif e < 0
+    puts "C"
+  else
+    puts "none1"
+  end
+elsif q > 0 && w < 0
+  if e > 0
+    puts "D"
+  elsif e < 0
+    puts "E"
+  else
+    puts "none2"
+  end
+else
+  puts "none3"
+end

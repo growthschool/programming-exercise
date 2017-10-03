@@ -4,5 +4,5 @@ print "请输入你的名字，然后按 Enter: "
 your_name = gets
 
 # ...
-
+print your_name + "is "
 puts "smartful"

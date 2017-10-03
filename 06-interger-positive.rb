@@ -6,5 +6,18 @@ x = gets
 
 # ....
 
-puts "这个数是_____ (正数或零或负数)"
-puts "这个数是_____ (偶数或奇数)"
+if x.to_f > 0
+  puts "正数"
+elsif x.to_f < 0
+  puts "负数"
+else
+  puts "0"
+end
+
+if x.to_f % 2 == 0
+  puts "偶数"
+else
+  puts "奇数"
+end
+
+#bug :输入任意非数字串为0和偶数

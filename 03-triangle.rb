@@ -11,3 +11,5 @@ b = gets
 # .....
 
 puts "直角三角形的面积是: #{ a.to_f * b.to_f / 2 }"
+
+#second time
