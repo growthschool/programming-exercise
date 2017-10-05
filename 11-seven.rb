@@ -2,8 +2,9 @@
 
 i = 1
 while ( i <= 100 )
-
-  # ....
+  if (7*i) < 100
+    puts 7*i
+  end
 
   i+=1
 end
