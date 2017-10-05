@@ -5,4 +5,4 @@ your_name = gets
 
 # ...
 
-puts "Hello, pebble"
+puts "Hello, king"
