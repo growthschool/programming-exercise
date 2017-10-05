@@ -2,6 +2,24 @@
 
 def is_prime(n)
 # ....
+  if n < 2
+    return false
+  end
+
+  if n == 2
+    return true
+  end
+
+  if n > 2
+    i = 2
+    while i <= n/2
+      if n % i == 0
+        return false
+      end
+      i += 1
+    end
+    return true
+  end
 end
 
 print "请输入数字 N，然后按 Enter: "
