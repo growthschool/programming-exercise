@@ -10,7 +10,23 @@ arr = [
 
 # ....
 
-puts "所有成年人，并由小到大: _________"
+h = []
+arr.each do |a|
+  if a["age"] > 18
+    h << a
+  end
+  h
+end
+
+(0..h.length-1).each do |i|
+  min, index = h[i], i
+  (i+1..h.length-1).each do |j|
+    min, index = h[j], j if h[j]["age"] < min["age"]
+    h[i], h[index] = h[index], h[i]
+  end
+end
+
+puts "所有成年人，并由小到大: #{h}"
 
 # 答案应该是
 #[
