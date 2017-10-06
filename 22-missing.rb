@@ -2,6 +2,20 @@
 
 def find_missing(arr)
   # ...
+  missingArr = []
+  for i in 0..9
+    missing = true
+    for a in arr
+      if a == i
+        missing = false
+        break
+      end
+    end
+    if missing
+      missingArr.push(i)
+    end
+  end
+  missingArr
 end
 
 answer = find_missing( [2,2,1,5,8,4] )
