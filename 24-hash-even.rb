@@ -17,5 +17,3 @@ h = {
 answer = find_even_keys(h)
 
 puts "有偶数 value 的 keys 有 #{answer}" # 应该是数组 [b,d,e]
-
-
