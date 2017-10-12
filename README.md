@@ -1,5 +1,6 @@
 # programming-exercise
 
+```
 输入、处理、输出
 基本算术
 控制流程
@@ -9,7 +10,8 @@
 散列 Hash
 对象 Object
 档案 File
+```
 
-其中每个 .rb 档案就是一个小题目需要完成，用 ruby 档名 就会执行，例如：
+其中每个 `.rb` 档案就是一个小题目需要完成，用 `ruby 档名` 就会执行，例如：
 
-ruby 01-hello.rb
+`ruby 01-hello.rb`
