@@ -3,9 +3,13 @@
 print "请输入数字 N，然后按 Enter: "
 n = gets
 
-# while ( ... )
-#   while ( ...)
-#
-#   end
-# end
+a = 0
 
+while (a <= n.to_i)
+  b = 0
+  while (b <= n.to_i)
+    puts "#{a} x #{b} = #{a * b}"
+    b += 1
+  end
+    a += 1
+end
