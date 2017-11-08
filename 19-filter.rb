@@ -2,6 +2,13 @@
 
 def filter_even(arr)
   #...
+  arr2 = []
+  arr.each do |i|
+    if i % 2 == 0
+      arr2.push (i)
+    end
+  end
+  arr2
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]

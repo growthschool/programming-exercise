@@ -2,6 +2,9 @@
 
 def calculate_area(a, b)
   # ....
+  a = a.to_f
+  b = b.to_f
+  s = ( a * b ) / 2
 end
 
 print "请输入直角三角形的高，然后按 Enter: "

@@ -5,6 +5,12 @@ arr = []
 print "请输入数字 N，然后按 Enter: "
 n = gets
 
+n = n.to_i
+
+(0..n-1).each_with_index do |i|
+  # arr.push (i*i)
+  arr << i ** 2
+end
 # ...
 
 puts arr.to_s
