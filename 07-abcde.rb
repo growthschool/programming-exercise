@@ -9,14 +9,28 @@
 #     当 z < 0 输出 "E"
 
 print "请输入一个整数x，然后按 Enter: "
-x = gets
+x = (gets).to_i
 
 print "请输入一个整数y，然后按 Enter: "
-y = gets
+y = (gets).to_i
 
 print "请输入一个整数z，然后按 Enter: "
-z = gets
+z = (gets).to_i
 
-# ....
+if x < 0
+  result = "A"
+elsif x > 0
+  if y > 0 && z > 0
+    result = "B"
+  elsif y >0 && z < 0
+    result = "C"
+  elsif y < 0 && z > 0
+    result = "D"
+  else
+    result = "E"
+  end
+else
+  result = "0"
+end
 
-puts "结果是________(A或B或C或D或E)"
+puts "结果是#{result}"
