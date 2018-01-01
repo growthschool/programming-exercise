@@ -9,7 +9,7 @@ def find_max(array)
   end
   return m
 end
-
+# 直接用max也行。
 arr = [8, 12, 36, 93, 9, 75]
 
 max = find_max(arr)
