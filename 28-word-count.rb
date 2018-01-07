@@ -16,4 +16,4 @@ doc.each_line { |line|
   }
 }
 
-puts hg
+puts h
