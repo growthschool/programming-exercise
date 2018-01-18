@@ -2,7 +2,15 @@
 
 def find_even_keys(hash)
 
-  # ... (请回传一个数组)
+  arr = []
+
+  hash.each do |k, v|
+    if v % 2 == 0
+      arr << k
+    end
+  end
+
+  return arr 
 
 end
 
@@ -17,5 +25,3 @@ h = {
 answer = find_even_keys(h)
 
 puts "有偶数 value 的 keys 有 #{answer}" # 应该是数组 [b,d,e]
-
-
