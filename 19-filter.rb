@@ -1,7 +1,13 @@
 # 给定一阵列内含数字，输出另一个数组只包含偶数
 
 def filter_even(arr)
-  #...
+  arra = []
+  arr.each do |i|
+    if i % 2 == 0
+      arra << i
+    end
+  end
+  return arra
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]

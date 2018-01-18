@@ -12,9 +12,14 @@ while (true)
   end
 end
 
+suma = arr.inject(0, :+)
+avga = suma.to_f / arr.size
+maxa = arr.max
+mina = arr.min
+
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+puts "总和是 #{suma}"
+puts "平均是 #{avga}"
+puts "最大值是 #{maxa}"
+puts "最小值是 #{mina}"

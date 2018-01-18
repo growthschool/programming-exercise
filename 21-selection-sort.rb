@@ -2,7 +2,17 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def selection_sort(arr)
-  #...
+   n = arr.size
+   for i in 0..(n - 1)
+     for j in (i + 1)..(n - 1)
+       if arr[i] >= arr[j]
+         tem = arr[j]
+         arr[j] = arr[i]
+         arr[i] = tem 
+       end
+     end
+   end
+   return arr
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]

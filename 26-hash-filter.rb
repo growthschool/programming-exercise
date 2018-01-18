@@ -8,9 +8,17 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
+arra = []
 
-puts "所有成年人，并由小到大: _________"
+arr.each do |h|
+    if h["age"] >= 18
+      arra << h
+    end
+end
+
+result = arra.sort_by { |h| h["age"]  }
+
+puts "所有成年人，并由小到大: #{result}"
 
 # 答案应该是
 #[
