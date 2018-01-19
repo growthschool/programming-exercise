@@ -25,18 +25,16 @@ if x > 0
    if y > 0
       if z > 0
          puts "结果是B"
-      else if z < 0
+      elsif z < 0
          puts "结果是C"
-      end
       end
    end
 
    if y < 0
       if z > 0
          puts "结果是D"
-      else if z < 0
+      elsif z < 0
          puts "结果是E"
-      end
       end
    end
 
