@@ -8,7 +8,7 @@ def insertion_sort(arr)
   while (x < n)
     a = arr.first
     ai = 0
-    arr.each_with_index do |i, j|
+    arr.each_with_index do |i, j|  #从j开始数，j为索引数值,为了找到arr中的最大值，每找到一个就删除一个
       if a > i
          a = i
          ai = j

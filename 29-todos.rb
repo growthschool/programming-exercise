@@ -28,7 +28,7 @@ while (true)
 
     File.open("todos.txt", "w+") do |f|
 
-      f << todos.join("\n")  #将数组转化为字符串
+      f << todos.join("\n")  #将数组转化为字符串,若是没有join("\n")，得到的就是一组数组
     end
 
     break;

@@ -6,7 +6,7 @@ def count(arr)
   n = arr.size
 
   while (i < n)
-    a = arr.first
+    a = arr.first  #从第一个开始计算，算晚删除后第一位就换了
     value = 0
     arr.each do |i|
       if a == i

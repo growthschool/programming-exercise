@@ -4,22 +4,21 @@
 # 如果 BMI >= 24，显示过重
 # 如果 BMI 介于 18.5 ~ 24，显示正常
 
-print "请输入您的体重(公斤)，然后按 Enter: "
+print '请输入您的体重(公斤)，然后按 Enter: '
 weight = gets
 
-print "请输入您的身高(厘米)，然后按 Enter: "
+print '请输入您的身高(厘米)，然后按 Enter: '
 height = gets
 
-BMI = weight.to_f/(height.to_f * height.to_f/10000)
+BMI = weight.to_f / (height.to_f * height.to_f / 10_000)
 
-if BMI < 18.5
-  p = "过轻"
-elsif BMI >= 24
-  p = "过重"
-else
-  p = "正常"
-end
-
+p = if BMI < 18.5
+      '过轻'
+    elsif BMI >= 24
+      '过重'
+    else
+      '正常'
+    end
 
 puts "您的 BMI 是: #{BMI}"
 

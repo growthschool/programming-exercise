@@ -22,7 +22,7 @@ b = []
 while (x < n)
   a = h.first
   ai = 0
-  h.each_with_index do |i, j|
+  h.each_with_index do |i, j|  #找到最小的
     if a["age"] > i["age"]
        a = i
        ai = j
