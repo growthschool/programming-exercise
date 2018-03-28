@@ -2,26 +2,19 @@
 
 def is_prime(n)
   i = 2
-  while (i <= n/2)
+  while i <= n / 2
 
-    if n%i ==0
-      break
-    end
-    i +=1
+    break if n % i == 0
+    i += 1
   end
-  if i <= n/2
-    false
-  else
-    true
-  end
-
+  i > n / 2
 end
 
-print "请输入数字 N，然后按 Enter: "
+print '请输入数字 N，然后按 Enter: '
 n = gets
 
 if is_prime(n.to_i)
-  puts "这是质数"
+  puts '这是质数'
 else
-  puts "这不是质数"
+  puts '这不是质数'
 end

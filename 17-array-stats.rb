@@ -2,8 +2,8 @@
 
 arr = []
 
-while (true)
-  print "请输入数字，结束请直接按 Enter: "
+loop do
+  print '请输入数字，结束请直接按 Enter: '
   user_input = gets
   if user_input == "\n"
     break
@@ -13,27 +13,23 @@ while (true)
 end
 
 def find_max(array)
-  a= 0
+  a = array.first
   array.each do |i|
-    if i > a
-      a = i
-    end
+    a = i if i > a
   end
   a
 end
 
 def find_min(array)
-  a= array.first
+  a = array.first
   array.each do |i|
-    if a > i
-      a = i
-    end
+    a = i if a > i
   end
   a
 end
 
 def sum(array)
-  a= 0
+  a = 0
   array.each do |i|
     a += i
   end
@@ -41,12 +37,8 @@ def sum(array)
 end
 
 def average(array)
-  a= 0
-  b= 0
-  array.each do |i|
-    a += i
-    b = a/array.size
-  end
+  a = sum(array)
+  b = a / array.length
   b
 end
 

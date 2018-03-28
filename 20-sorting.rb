@@ -4,16 +4,13 @@
 def filter_even(arr)
   b = []
   arr.each do |i|
-    if i%2 == 0
-      b << i
-    end
+    b << i if i.even?
   end
   b = b.uniq
   b = b.sort
   b.to_s
 end
 
-arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
-
+arr = [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
 
 puts filter_even(arr) # 应该是 [42, 46, 68, 86]
