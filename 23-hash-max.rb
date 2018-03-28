@@ -3,7 +3,7 @@
 def find_max(hash)
   a = 0
   b = 0
-  hash.each do |key , value|
+  hash.each do |key, value|
     if a < value
       a = value
       b = key
@@ -13,11 +13,11 @@ def find_max(hash)
 end
 
 h = {
-  "a" => 71,
-  "b" => 38,
-  "c" => 21,
-  "d" => 80,
-  "e" => 10
+  'a' => 71,
+  'b' => 38,
+  'c' => 21,
+  'd' => 80,
+  'e' => 10
 }
 
 answer = find_max(h)

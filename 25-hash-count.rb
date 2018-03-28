@@ -5,23 +5,21 @@ def count(arr)
   i = 0
   n = arr.size
 
-  while (i < n)
-    a = arr.first  #从第一个开始计算，算晚删除后第一位就换了
+  while i < n
+    a = arr.first # 从第一个开始计算，算晚删除后第一位就换了
     value = 0
-    arr.each do |i|
-      if a == i
-        value +=1
-      end
-      h[i] = value
+    arr.each do |p|
+      value += 1 if a == p
+      h[a] = value
     end
-    arr = arr - [a]
+    arr -= [a]
     i += 1
   end
 
-  return h # 回传一个 hash
+  h # 回传一个 hash
 end
 
-arr =  ["a", "d", "d", "c", "b", "c", "c", "c", "d", "d", "e", "e", "e", "d", "a", "c", "e", "a", "d", "e"]
+arr =  %w[a d d c b c c c d d e e e d a c e a d e]
 
 answer = count(arr)
 

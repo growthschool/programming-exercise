@@ -3,23 +3,22 @@
 
 def insertion_sort(arr)
   n = arr.size
-  x=0
+  x = 0
   b = []
-  while (x < n)
+  while x < n
     a = arr.first
     ai = 0
-    arr.each_with_index do |i, j|  #从j开始数，j为索引数值,为了找到arr中的最大值，每找到一个就删除一个
+    arr.each_with_index do |i, j| # 从j开始数，j为索引数值,为了找到arr中的最大值，每找到一个就删除一个
       if a > i
-         a = i
-         ai = j
-       end
+        a = i
+        ai = j
+      end
     end
     b << a
     arr.delete_at(ai)
     x += 1
   end
   b
-
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
