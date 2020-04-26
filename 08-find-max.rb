@@ -9,6 +9,18 @@ y = gets
 print "请输入一个数字z，然后按 Enter: "
 z = gets
 
-# ....
+if x > y
+  if x > z
+    c = "x"
+  else
+    c = "z"
+  end
+else
+  if y > z
+    c = "y"
+  else y < z
+    c = "z"
+  end
+end
 
-puts "最大的数是 ________(x或y或z)"
+puts "最大的数是 #{c}"
