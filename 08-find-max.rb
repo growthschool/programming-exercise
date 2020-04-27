@@ -9,16 +9,16 @@ y = gets
 print "请输入一个数字z，然后按 Enter: "
 z = gets
 
-if x > y
-  if x > z
+if x.to_f > y.to_f
+  if x.to_f > z.to_f
     c = "x"
   else
     c = "z"
   end
 else
-  if y > z
+  if y.to_f > z.to_f
     c = "y"
-  else y < z
+  else
     c = "z"
   end
 end
