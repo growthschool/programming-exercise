@@ -3,15 +3,15 @@
 def find_max(x, y, z)
   if x.to_f > y.to_f
     if x.to_f > z.to_f
-      c = "x"
+      return "x"
     else
-      c = "z"
+      return "z"
     end
   else
     if y.to_f > z.to_f
-      c = "y"
+      return "y"
     else
-      c = "z"
+      return "z"
     end
   end
 end
@@ -24,6 +24,7 @@ y = gets
 
 print "请输入一个数字z，然后按 Enter: "
 z = gets
+
 
 
 answer = find_max(x,y,z)
