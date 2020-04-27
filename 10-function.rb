@@ -1,16 +1,16 @@
 # 题目: 使用者输入 x,y,z，请输出三个数中最大的数
 
 def find_max(x, y, z)
-  if x > y
-    if x > z
+  if x.to_f > y.to_f
+    if x.to_f > z.to_f
       c = "x"
     else
       c = "z"
     end
-  else x < y
-    if y > z
+  else
+    if y.to_f > z.to_f
       c = "y"
-    else y < z
+    else
       c = "z"
     end
   end
