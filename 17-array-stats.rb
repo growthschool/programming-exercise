@@ -12,9 +12,17 @@ while (true)
   end
 end
 
+  i = 0
+  x = 0
+  while i < arr.size
+    x = x + arr[i]
+    i+=1
+  end
+
+
 puts arr.to_s
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+puts "总和是 #{x}"
+puts "平均是 #{(x.to_f/arr.size)}"
+puts "最大值是 #{arr.max}"
+puts "最小值是 #{arr.min}"
