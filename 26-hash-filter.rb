@@ -8,6 +8,9 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
+
+arr.delete_if { |arr| arr["age"] <= 18}
+
 i = 0
 j = 1
 
