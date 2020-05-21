@@ -10,8 +10,7 @@ arr = [
 
 arr.delete_if { |arr| arr["age"] <= 18}
 
-i = 0
-j = 1
+i,j = 0,1
 
 while i < arr.size
   while j < arr.size
