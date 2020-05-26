@@ -2,4 +2,12 @@
 
 doc = File.read("wordcount.txt")
 
-# ...
+arr = doc.downcase.scan(/\w+/)
+
+h = {}
+
+arr.each do |i|
+  h[i] = arr.count(i)
+end
+
+puts h
