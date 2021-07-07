@@ -8,9 +8,27 @@ arr = [
   { "name" => "Vincent", "age" => 6 },
 ]
 
-# ....
 
-puts "所有成年人，并由小到大: _________"
+arr.delete_if { |arr| arr["age"] <= 18}
+
+i = 0
+j = 1
+
+while i < arr.size
+  while j < arr.size
+    if arr[i]["age"] > arr[j]["age"]
+      min = arr[j]
+      arr[j] = arr[i]
+      arr[i] = min
+    end
+    j += 1
+  end
+  i += 1
+  j = i + 1
+end
+
+
+puts "所有成年人，并由小到大: #{arr}"
 
 # 答案应该是
 #[
