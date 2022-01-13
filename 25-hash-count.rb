@@ -4,7 +4,12 @@ def count(arr)
   h = {}
 
   arr.each do |i|
-    # ...
+    key = i.to_sym
+    if array_total = h[key]
+      h[key] = array_total + 1
+    else
+      h[key] = 1
+    end
   end
 
   return h # 回传一个 hash

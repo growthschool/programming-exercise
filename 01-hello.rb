@@ -5,4 +5,4 @@ your_name = gets
 
 # ...
 
-puts "(请替换成最后的答案)"
+puts "Hi, #{your_name}"
