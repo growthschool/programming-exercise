@@ -2,7 +2,16 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def selection_sort(arr)
-  #...
+  (0...arr.length).each do |j|
+    key = arr[j]
+    i = j -1
+    while i >= 0 && arr[i] > key
+      arr[i + 1] = arr[i]
+      i = i - 1
+    end
+    arr[i + 1] = key
+  end
+  arr
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]

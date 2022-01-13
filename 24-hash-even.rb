@@ -3,8 +3,20 @@
 def find_even_keys(hash)
 
   # ... (请回传一个数组)
-
+  result = []
+  hash.values.each do |hash|
+    if hash % 2 == 0
+      result << hash
+    end
+  end
+  result2 = []
+  result.each do |i|
+    result2 << hash.key(i)
+  end
+  return result2
 end
+
+
 
 h = {
   "a" => 71,
